@@ -3,26 +3,32 @@ using  std::cout;
 using std::cin;
 using std::endl;
 
-
-
-
+// funções
+int soma(int nun1, int nun2)
+    {
+        return nun1 + nun2;
+    }
+int sub(int nun1, int nun2){
+    return nun1 - nun2;
+}
+int divi(int nun1, int nun2){
+    return nun1 / nun2;
+}
+int mult(int nun1, int nun2){
+    return nun1 * nun2;
+}
+int res(int nun1, int nun2){
+    return nun1 % nun2;
+}
 int main()
 {
-// condição if
-int nun1, nun2;
-    cout << "Digite um número: " << endl;
-    cin >> nun1;
-    cout << "Digite outro número" << endl;
-    cin >> nun2;
-    if (nun1 == nun2){
-        cout << nun1 << " = " << nun2 << endl;
-    }
-    if (nun1 > nun2){
-        cout << nun1 << " > " << nun2 << endl;
-    }
-    if (nun1 < nun2){
-        cout << nun1 << " < " << nun2 << endl;
-    }
+cout << soma (10, 15) <<endl;
+cout << sub (10, 15) <<endl;
+cout << divi (10, 15) <<endl;
+cout << mult (10, 15) <<endl;
+cout << res (10, 15) <<endl;
+
+    
     
 
     return 0;
@@ -52,6 +58,23 @@ int nun1, nun2;
         cout << "resto: " << res << endl;
 
     ----------------------------------------------
+// condição if
+    int nun1, nun2;
+    cout << "Digite um número: " << endl;
+    cin >> nun1;
+    cout << "Digite outro número" << endl;
+    cin >> nun2;
+    if (nun1 == nun2){
+        cout << nun1 << " = " << nun2 << endl;
+    }
+    if (nun1 > nun2){
+        cout << nun1 << " > " << nun2 << endl;
+    }
+    if (nun1 < nun2){
+        cout << nun1 << " < " << nun2 << endl;
+    }
+
+ ---------------------------------------------   
 // laço for
     int total;
     for (int i = 0; i <= 20; i+=2){
