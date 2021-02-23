@@ -8,7 +8,23 @@ using std::endl;
 
 int main()
 {
-        
+// condição if
+int nun1, nun2;
+    cout << "Digite um número: " << endl;
+    cin >> nun1;
+    cout << "Digite outro número" << endl;
+    cin >> nun2;
+    if (nun1 == nun2){
+        cout << nun1 << " = " << nun2 << endl;
+    }
+    if (nun1 > nun2){
+        cout << nun1 << " > " << nun2 << endl;
+    }
+    if (nun1 < nun2){
+        cout << nun1 << " < " << nun2 << endl;
+    }
+    
+
     return 0;
 }
 
