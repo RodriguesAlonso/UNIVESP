@@ -3,33 +3,9 @@ using  std::cout;
 using std::cin;
 using std::endl;
 
-// funções
-int soma(int nun1, int nun2)
-    {
-        return nun1 + nun2;
-    }
-int sub(int nun1, int nun2){
-    return nun1 - nun2;
-}
-int divi(int nun1, int nun2){
-    return nun1 / nun2;
-}
-int mult(int nun1, int nun2){
-    return nun1 * nun2;
-}
-int res(int nun1, int nun2){
-    return nun1 % nun2;
-}
+
 int main()
 {
-cout << soma (10, 15) <<endl;
-cout << sub (10, 15) <<endl;
-cout << divi (10, 15) <<endl;
-cout << mult (10, 15) <<endl;
-cout << res (10, 15) <<endl;
-
-    
-    
 
     return 0;
 }
@@ -98,6 +74,23 @@ cout << res (10, 15) <<endl;
     } while (num != 0);
     float media =(float)soma / (float)(contador -1) ;
     cout << "A média da serie é " << media << endl;
-------------------------------------------------------
+-----------------
+// funções
+    int soma(int nun1, int nun2)
+        {
+            return nun1 + nun2;
+        }
+    int sub(int nun1, int nun2){
+        return nun1 - nun2;
+    }
+    int divi(int nun1, int nun2){
+        return nun1 / nun2;
+    }
+    int mult(int nun1, int nun2){
+        return nun1 * nun2;
+    }
+    int res(int nun1, int nun2){
+        return nun1 % nun2;
+}------------------------------
 
     */
