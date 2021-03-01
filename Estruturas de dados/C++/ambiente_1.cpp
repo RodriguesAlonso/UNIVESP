@@ -1,12 +1,12 @@
-#include<iostream>
+#include <iostream>
+const NUN_ELE = 10;
 
 using std::cout;
 using std::cin;
 using std::endl;
 
-int main()
-{
-    /* code */
-    return 0;
-}
+main(){
+    
 
+return 0;
+}
