@@ -44,7 +44,7 @@ void Time::nextSecond(){
         minute = 0;
         hour += 1;
     }
-    if (hour == 60)
+    if (hour == 24)
     {
         hour = 0;
     }
