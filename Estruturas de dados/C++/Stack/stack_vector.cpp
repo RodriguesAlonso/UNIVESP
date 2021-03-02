@@ -41,18 +41,19 @@ void Stack::push(ItemType item)
     structure[lenght] = item;
     lenght++;     
     }else{
-        throw "Stack already full";
+        throw "Stack already full!";
     }
 }    
 ItemType Stack::pop()    
 {
-    if (!isEmpty)
+    if (!isEmpty())
     {
         ItemType aux = structure[lenght -1];
         lenght--;
         return aux;
+    }else{
+        throw "Stack is empty!";
     }
-    
 }
 
     
