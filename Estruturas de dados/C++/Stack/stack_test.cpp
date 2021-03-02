@@ -1,9 +1,7 @@
 #include<iostream>
 #include "stack.h"
 
-using std::cout;
-using std::cin;
-using std::endl;
+using namespace std;
 
 int main()
 {
@@ -11,7 +9,18 @@ int main()
     ItemType character;
     ItemType stackItem;
 
-cout << "Add one String"
+    cout << "Add one String. "<<endl;
+    cin.get(character);
+    while (character !=  '\n')
+    {
+        stack.push(character);
+        cin.get(character);
+    }
+    while (!stack.isEmpty())
+    {
+        stackItem = stack.pop();
+        cout << stackItem;
+    }
 
     return 0;
 }
