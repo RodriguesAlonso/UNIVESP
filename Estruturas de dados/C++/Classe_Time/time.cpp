@@ -48,7 +48,9 @@ void Time::nextSecond(){
     {
         hour = 0;
     }
+}
     
-    
-    
+// builder    
+Time::Time(int h, int m, int s) : hour(h), minute(m), second(s) {
+
 }
