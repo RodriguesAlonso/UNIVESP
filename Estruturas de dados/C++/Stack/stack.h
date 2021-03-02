@@ -3,11 +3,11 @@
 const int MAX_ITEMS = 100;
 
 
-class stack
+class Stack
 {
     public:
-    stack();
-    ~stack();
+    Stack();
+    ~Stack();
 
     bool isEmpty() const;
     bool isFull() const;
