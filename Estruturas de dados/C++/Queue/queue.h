@@ -1,25 +1,21 @@
-#include "item_type.h"
+#include "item_Type.h"
 
-const int MAX_ITEM = 100;
- 
-class Queue
-{
-private:
-    /* data */
+const MAX_ITEM = 100;
+
+class Queue{
+    private:
+    int front;
+    int back;
     ItemType* structure;
-    int lenght;
-    
 
-public:
+    public:
     Queue();
     ~Queue();
-    /*pop, push, print, isEmpty, isFull*/
-    bool isEmpty() const;
+
     bool isFull() const;
+    bool isEmpty() const;
     void print() const;
 
-    void push(ItemType);
-    ItemType pop();
-
-
+    void enqueue(ItemType);
+    ItemType denqueue();
 };
