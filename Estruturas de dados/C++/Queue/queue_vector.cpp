@@ -23,7 +23,7 @@ void Queue::print() const{
 }
 
 void Queue::push(ItemType item){
-    if (!isFull){
+    if (!isFull()){
         structure[-1] = item;
         lenght++;
     } else{
@@ -31,7 +31,7 @@ void Queue::push(ItemType item){
     }
 }
 ItemType Queue::pop(){
-    if (!isEmpty)
+    if (!isEmpty())
     {
         ItemType aux = structure[0];
         lenght--;
@@ -41,4 +41,13 @@ ItemType Queue::pop(){
     }
     
 }
+Queue::Queue()
+{
+    lenght = 0;
+    structure = new ItemType(MAX_ITEM);
+}
 
+Queue::~Queue()
+{
+    delete [] structure;
+}

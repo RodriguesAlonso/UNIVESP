@@ -18,6 +18,7 @@ int main()
         queue.push(character);
         cin.get(character);
     }
+    queue.print();
     while (!queue.isEmpty())
     {
         queueItem = queue.pop();

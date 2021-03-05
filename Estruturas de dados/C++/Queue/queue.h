@@ -1,7 +1,7 @@
 #include "item_type.h"
 
 const int MAX_ITEM = 100;
-
+ 
 class Queue
 {
 private:
@@ -23,14 +23,3 @@ public:
 
 
 };
-Queue::Queue()
-{
-    lenght = 0;
-    structure = new ItemType(MAX_ITEM);
-}
-
-Queue::~Queue()
-{
-    delete [] structure;
-}
-
