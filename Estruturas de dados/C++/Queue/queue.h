@@ -1,6 +1,6 @@
 #include "item_Type.h"
 
-const MAX_ITEM = 100;
+const int MAX_ITEM = 100;
 
 class Queue{
     private:
