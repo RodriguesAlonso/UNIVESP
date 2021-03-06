@@ -1,0 +1,38 @@
+#ifndef TIME_H
+#define TIME_H
+
+class Time
+{
+private:
+    int hour;
+    int minute;
+    int second;
+public:
+    Time();
+    ~Time();
+
+    int getHour() const;
+    int getMinute() const;
+    int getSecond() const;
+
+    void setHour(int hour);
+    void setMinute(int minute);
+    void setSecond(int minute);
+
+    void print()const
+    void nextSecond();
+;
+
+Time::Time(int hour, int minute, int second)
+{
+    this ->hour = hour;
+    this ->minute = minute;
+    this ->second = second;
+
+}
+
+Time::~Time()
+{
+    delete []Time;
+}
+#endif
