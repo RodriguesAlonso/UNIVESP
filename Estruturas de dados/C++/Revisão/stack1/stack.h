@@ -8,8 +8,13 @@ class Stack{
     ItemType* structure;
 
     public:
-    bool isEmpty();
-    bool isFull();
-    
+    Stack();
+    ~Stack();
+    bool isEmpty() const;
+    bool isFull() const;
+    void print() const;
+
+    void push(ItemType);
+    ItemType pop();
 
 };
