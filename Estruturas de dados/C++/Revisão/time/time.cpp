@@ -1,8 +1,9 @@
 #include <iostream>
 #include "time.h"
+
 using std::cout;
-using std::cin;
 using std::endl;
+
 
 int Time::getHour() const{
     return hour;
@@ -14,8 +15,9 @@ int Time::getSecond() const{
     return second;
 }
 
+
 void Time::print() const{
-    cout << hour << ":" << minute << ":" << second;
+    cout << endl << hour << ":" << minute << ":" << second << endl;
 }
 
 void Time::setHour(int hour){
@@ -44,4 +46,7 @@ void Time::nextSecond(){
     {
         hour = 0;
     }
+}
+Time::Time(int h, int m, int s) : hour(h), minute(m), second(s) {
+
 }
