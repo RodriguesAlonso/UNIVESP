@@ -1,6 +1,5 @@
 #include "node_type.h"
 
-
 class Stack{
     private:
     NodeType* structure;

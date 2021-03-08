@@ -5,6 +5,7 @@
 #include<iostream>
 using std::cout;
 using std::bad_alloc;
+using std::endl;
 
 Stack::Stack(){
     structure = NULL;
@@ -36,11 +37,12 @@ bool Stack::isFull() const{
 }
 
 void Stack::print() const{
-    NodeType* tempStucture;
-    while(structure != NULL){
+    NodeType* tempStucture = structure;
+    while(tempStucture != NULL){
         cout << tempStucture -> info;
-        tempStucture -> next;
-    } 
+        tempStucture = tempStucture-> next;
+    }
+     cout << endl;
 }
 
 void Stack::push(ItemType item){
@@ -62,8 +64,9 @@ ItemType Stack::pop(){
         tempPtr = structure;
         ItemType item = structure ->info;
         structure =structure -> next;
-        return item;
+        
         delete tempPtr;
+        return item;
     }else{
         throw "Stack is empty!";
     }

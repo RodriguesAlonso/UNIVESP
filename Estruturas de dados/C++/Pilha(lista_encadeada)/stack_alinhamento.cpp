@@ -10,17 +10,21 @@ int main()
     Stack stack;
     ItemType character;
     ItemType stackItem;
-    bool isMatched = true;
+    
 
     cout << "insira uma String: " << endl;
     cin.get(character);
+
+    bool isMatched = true;
     while   (isMatched && character != '\n')
-    {
-        if (character == '{' || character == '[' || character == '(')
         {
-            stack.push(character);
-        }
-        if (character == '}' || character == ')' || character == ')'){
+            
+            if (character == '{' || character == '(' || character == '[')
+            {
+                stack.push(character);
+            
+            }
+            if (character == '}' || character == ')' || character == ']'){
             if (stack.isEmpty())
             {
                 isMatched = false;
@@ -29,9 +33,11 @@ int main()
                 isMatched = (character == '}' && stackItem == '{') 
                 ||(character == ']' && stackItem == '[')
                 ||(character == ')' && stackItem == '(');
+            
+            }
+        
         }
         cin.get(character);
-        }
     }
     if (isMatched && stack.isEmpty())
     {
