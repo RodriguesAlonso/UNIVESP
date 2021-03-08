@@ -1,6 +1,6 @@
 typedef char ItemType;
 
-struct NoteType
+struct NodeType
 {
     ItemType info;
     NoteType* next;
