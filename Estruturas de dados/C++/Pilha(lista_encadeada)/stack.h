@@ -3,7 +3,7 @@
 
 class Stack{
     private:
-    NoteType* structure;
+    NodeType* structure;
 
     public:
     Stack();

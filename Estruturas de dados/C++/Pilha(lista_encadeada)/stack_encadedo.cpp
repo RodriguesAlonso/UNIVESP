@@ -26,7 +26,7 @@ bool Stack::isEmpty() const{
 bool Stack::isFull() const{
     NodeType* location;
     try{
-        location = new Nodetype;
+        location = new NodeType;
         delete location;
         return false;
     }catch(const bad_alloc exception)
@@ -36,5 +36,36 @@ bool Stack::isFull() const{
 }
 
 void Stack::print() const{
-    cout << 
+    NodeType* tempStucture;
+    while(structure != NULL){
+        cout << tempStucture -> info;
+        tempStucture -> next;
+    } 
 }
+
+void Stack::push(ItemType item){
+    if (!isFull())
+    {
+        NodeType* location;
+        location = new NodeType;
+        location -> info = item;
+        location -> next = structure;
+        structure = location;         
+    }else{
+        throw "Stack already full!";
+    }
+}
+ItemType Stack::pop(){
+    if (!isEmpty())
+    {
+        NodeType* tempPtr;
+        tempPtr = structure;
+        ItemType item = structure ->info;
+        structure =structure -> next;
+        return item;
+        delete tempPtr;
+    }else{
+        throw "Stack is empty!";
+    }
+}
+
