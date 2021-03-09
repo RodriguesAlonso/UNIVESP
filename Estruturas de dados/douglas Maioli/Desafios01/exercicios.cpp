@@ -12,7 +12,6 @@ int Exercicios::soma(int elementos, float *lista){
     }
     return somar;
 }
-
 void Exercicios::ex01(float nun){
     cout<< ((nun*nun) -3*nun +5);
 }
@@ -42,3 +41,30 @@ void Exercicios::ex02(){
     }
     
 }
+void Exercicios::ex03(){
+    int nun;
+    int cont;
+    int fat = 1;
+    cout<<"Digite o númer a ser fatorado: ";
+    cin >> nun;
+    cont = nun;
+    for (int i = 0; i < nun; i++)
+    {
+        fat *= cont;
+        cont--;
+    }
+    cout << nun <<"! = " << fat;
+}
+void Exercicios::ex04(){
+    int base, pot;
+    cout <<"digite o valor da base: ";
+    cin >> base;
+    cout <<"digite o valor da potencia: ";
+    cin >> pot;
+    int resultado =1;
+    for (int i = 0; i < pot; i++){
+        resultado *= base;
+    }
+    cout << base << " elavodo a " << pot <<" = " << resultado;
+}
+void Exercicios::ex05
