@@ -67,4 +67,20 @@ void Exercicios::ex04(){
     }
     cout << base << " elavodo a " << pot <<" = " << resultado;
 }
-void Exercicios::ex05
+void Exercicios::ex05(){
+    int idade;
+    float renda;
+    cout << "informe sua idade: ";
+    cin >> idade;
+    cout << "informe sua renda: ";
+    cin >> renda;
+    if (idade > 21 && renda < 1200)
+    {
+        cout<<"Pode participar do Programa Moradia Popular.";
+    }
+    else
+    {
+        cout << "Não pode participar do Programa Moradia Popular.";
+    }
+    
+}
