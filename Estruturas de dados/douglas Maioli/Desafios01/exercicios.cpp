@@ -43,15 +43,12 @@ void Exercicios::ex02(){
 }
 void Exercicios::ex03(){
     int nun;
-    int cont;
     int fat = 1;
     cout<<"Digite o númer a ser fatorado: ";
     cin >> nun;
-    cont = nun;
-    for (int i = 0; i < nun; i++)
+    for (int i = 1; i <= nun; i++)
     {
-        fat *= cont;
-        cont--;
+        fat *= i;
     }
     cout << nun <<"! = " << fat;
 }
@@ -61,7 +58,7 @@ void Exercicios::ex04(){
     cin >> base;
     cout <<"digite o valor da potencia: ";
     cin >> pot;
-    int resultado =1;
+    int resultado = 1;
     for (int i = 0; i < pot; i++){
         resultado *= base;
     }
@@ -74,7 +71,7 @@ void Exercicios::ex05(){
     cin >> idade;
     cout << "informe sua renda: ";
     cin >> renda;
-    if (idade > 21 && renda < 1200)
+    if (idade >= 21 && renda < 1200)
     {
         cout<<"Pode participar do Programa Moradia Popular.";
     }
