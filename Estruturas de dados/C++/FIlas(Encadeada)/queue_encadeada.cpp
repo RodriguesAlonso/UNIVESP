@@ -48,7 +48,7 @@ void Queue::enqueue(ItemType newItem){
         NodeType* newNode;
         newNode = new NodeType;
         newNode -> info = newItem;
-        newNode ->next = NULL; 
+        newNode -> next = NULL; 
         if (rear == NULL)
         {
             front = newNode;
@@ -58,7 +58,27 @@ void Queue::enqueue(ItemType newItem){
         }
         rear = NULL;
     }else{
-        throw "Queue already full";
+        throw "Queue is already full";
     }
-    
+}
+
+ItemType 
+Queue::dequeue(){
+    if (!isEmpty())
+    {
+        NodeType* tempPtr;
+        ItemType item = front -> info;
+        tempPtr = front;
+        front = front -> next;
+        if (rear == NULL)
+        {
+            front = NULL;
+        }
+        delete tempPtr;
+        return item;
+    }
+    else
+    {
+        throw "Enqueue is empty";
+    }
 }
