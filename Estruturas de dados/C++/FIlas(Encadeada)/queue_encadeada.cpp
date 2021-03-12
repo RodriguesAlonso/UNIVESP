@@ -42,3 +42,23 @@ bool Queue::isEmpty() const{
     return (front == NULL);
 }
 
+void Queue::enqueue(ItemType newItem){
+    if (!isFull())
+    {
+        NodeType* newNode;
+        newNode = new NodeType;
+        newNode -> info = newItem;
+        newNode ->next = NULL; 
+        if (rear == NULL)
+        {
+            front = newNode;
+        }
+        else{
+            rear -> next = newNode;
+        }
+        rear = NULL;
+    }else{
+        throw "Queue already full";
+    }
+    
+}
