@@ -1,11 +1,13 @@
-#ifdef NODETYPE_H
+#ifndef NODETYPE_H
 #define NODETYPE_H
 
-typedef new ItemType;
+typedef char ItemType;
 
-struct node_type
+struct NodeType
 {
     ItemType info;
     NodeType* next;
 };
 #endif
+
+
