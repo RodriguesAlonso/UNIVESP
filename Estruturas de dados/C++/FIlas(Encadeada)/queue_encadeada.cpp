@@ -82,3 +82,13 @@ Queue::dequeue(){
         throw "Enqueue is empty";
     }
 }
+
+void Queue::print() const{
+    NodeType* tempPtr;
+    tempPtr = front;
+    while (tempPtr !=NULL){
+        cout << tempPtr -> info;
+        tempPtr = tempPtr -> next;
+    }
+    cout << endl;
+}
