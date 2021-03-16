@@ -41,30 +41,32 @@ void Desafio02::ex06() const{
 
 }
 void Desafio02::ex07()const{
-    int elements1;
-    int elements2;
-    int rows;
-    int columns;
-    int *matrix = new int[12, 2];
+    int rows, columns;
     cout << "Enter the matrix rows: ";
     cin >> rows;
-    int *vectorRow = new int[rows];
     cout << "Enter the matrix columns: ";
     cin >> columns;
-    int *vectorColumn = new int[columns];
-
-    for (int i = 0; i < rows; i++)
-    {
+    int **matrix = (int**)malloc(rows * sizeof(int*));
+    for (int i = 0; i < rows; i++){
+        matrix[i] = (int*)malloc(columns * sizeof(int));
         for (int j = 0; j < columns; j++)
         {
             cout << "Insert the["<<i<<"]["<< j<<"] elements of the matrix01:"<<endl;
-            cin >> 
-            
+            cin >> matrix[i][j];
         }
+        cout << endl;
     }
+    for (int i = 0; i < rows; i++){
+        for (int j = 0; j < columns; j++)
+        {
+            cout<< matrix[i][j] << " ";
+        }
+        cout<<endl;
+    }    
+        /* code */
     
     
-    
+           //cout << "Insert the["<<i<<"]["<< j<<"] elements of the matrix01:"<<endl;
 }
 void Desafio02::ex08()const{
 
