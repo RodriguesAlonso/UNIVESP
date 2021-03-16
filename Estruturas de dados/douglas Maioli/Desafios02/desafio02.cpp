@@ -104,10 +104,35 @@ void Desafio02::ex07()const{
     cout<<"-=-=-=-"<<endl;    
 }
 void Desafio02::ex08()const{
-
+ bool stop = false;
+ int again;
+ while (!stop)
+ {
+    int n;
+    cout << "Enter the vector size: ";
+    cin >> n;
+    int* vector = new int[n];
+    for (int i = 0; i < n; i++)
+    {
+        cout << "Inset ["<< i <<"] element: ";
+        cin >> vector[i];
+    }
+    for (int i = 0; i < n; i++)
+    {
+        cout <<"Vector["<<i<<"] = " << vector[i] << endl;
+    }
+    delete []vector;
+    cout <<"Want to create another vector?"<<endl<<"type it 1-yes or 2-no : ";
+    cin >> again;
+    if (again == 2)
+    {
+        stop = true;
+    }
+    
+ }
 }
 void Desafio02::ex09()const{
-    
+
 }
 void Desafio02::ex010()const{
 
