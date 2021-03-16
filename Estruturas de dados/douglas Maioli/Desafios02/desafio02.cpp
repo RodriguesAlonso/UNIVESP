@@ -132,7 +132,19 @@ void Desafio02::ex08()const{
  }
 }
 void Desafio02::ex09()const{
+    int idade01, idade02, media;
+    int *p1 = &idade01;
+    int *p2 = &idade02;
+    int *p3 = &media;
 
+    cout<<"idade 01?: ";
+    cin >> *p1;
+    cout<<"idade 02?: ";
+    cin >> *p2;
+    *p3 = (*p1 + *p2)/2;
+    cout << "Media = "<< *p3<<endl;
+    cout <<"idade01 = " << idade01 <<" idade02 = "<< idade02 << " Media = " << media;
+    
 }
 void Desafio02::ex010()const{
 
