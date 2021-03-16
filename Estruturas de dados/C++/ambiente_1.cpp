@@ -5,55 +5,55 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-void modificando_vetor_sintax_1(const int b[], int nun){ // const para não alterar o valor do vetor dentro da função
-     for(int i = 0; i < nun; i++){
-         b[i] = b[i] * 2;
-     }
+void valor_alocado_memoria(int* p)
+        {
+            p = new int; // novo endereço de memória
+            *p = 8; // aloca valor para o endereçõ dentro da função
+        }
+    void valor_modificando_memoria(int* p)    
+        {
+        *p = 8; // modifica o valor do enderço de memoria fora da função
+        }
+    void referencia(int*& p){
+        p = new int; // novo endereço de memória
+        *p = 8; // aloca o endereço novo de memória fora da função
     }
-void modificando_vetor_sintax_2(const int* b, int nun){
-    for (int i = 0; i < nun; i++)
-    {
-        b[i] = b[i] * 2;
-    }
-    
-}
 main(){
-    // alocação estática
-    int c[ELE] = {1,2,3,4,5,6,7,8,9,10};
-    // alocação dinâmica
-    int *d = new int[ELE];
-    for (int i = 0; i < ELE; i++){
-        d[i] = i + 1;
-    }
-    cout << endl << "---antes-C--" << endl;
-    for (int i = 0; i < ELE; i++)
-    {
-        cout <<"c["<< c[i] << "] ";        
-    }
-    cout << endl << "---antes-D--" << endl;
-    for (int i = 0; i < ELE; i++)
-    {
-        cout <<"d["<< d[i] << "] ";        
-    }
-
-    modificando_vetor_sintax_1(c, ELE);
-    modificando_vetor_sintax_2(c, ELE);
-
-    modificando_vetor_sintax_1(d, ELE);
-    modificando_vetor_sintax_2(d, ELE);
-    cout << endl << "---depois-C--" << endl;
-    for (int i = 0; i < ELE; i++)
-    {
-        cout <<"c["<< c[i] << "] ";        
-    }
-    cout << endl << "---depois-D--" << endl;
-    for (int i = 0; i < ELE; i++)
-    {
-        cout <<"d["<< d[i] << "] ";        
-    }
+    int a = 1;
+    int b = 2;
+    int c = 3;
     
+    int* p1 = &a;  
+    int* p2 = &b;
+    int* p3 = &c;
+    cout << endl << "--antes sem ponteiro----" << endl;
+    cout << "p1: " << p1 <<endl;
+    cout << "p2: " << p2 <<endl;
+    cout << "p3: " << p3 <<endl;
+    cout << endl << "---antes com ponteiro ---" << endl;
+    
+    cout << "p1: " << *p1 <<endl;
+    cout << "p2: " << *p2 <<endl;
+    cout << "p3: " << *p3 <<endl;
     cout << endl << "------" << endl;
+    
+    valor_alocado_memoria(p1);
+    valor_modificando_memoria(p2);
+    referencia(p3);
 
+    cout << endl << "--depois sem ponteiro----" << endl;
+    cout << "p1: " << p1 <<endl;
+    cout << "p2: " << p2 <<endl;
+    cout << "p3: " << p3 <<endl;
+    cout << endl << "---depois com ponteiro ---" << endl;
+    
+    cout << "p1: " << *p1 <<endl;
+    cout << "p2: " << *p2 <<endl;
+    cout << "p3: " << *p3 <<endl;
+    cout << endl << "--Valores---" << endl;
 
+    cout << "a: " << a << endl;
+    cout << "b: " << b << endl;
+    cout << "c: " << c << endl;
 return 0;
 }

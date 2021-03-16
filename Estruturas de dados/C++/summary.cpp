@@ -115,9 +115,10 @@ int main()
             p = new int; // novo endereço de memória
             *p = 8; // aloca valor para o endereçõ dentro da função
         }
-    void valor_modificando_memoria(int* p)    {
+    void valor_modificando_memoria(int* p)    
+        {
         *p = 8; // modifica o valor do enderço de memoria fora da função
-    }
+        }
     void referencia(int*& p){
         p = new int; // novo endereço de memória
         *p = 8; // aloca o endereço novo de memória fora da função
@@ -129,7 +130,7 @@ int main()
     int* p1 = &a;  
     int* p2 = &b;
     int* p3 = &c;
-    cout << endl << "--antes sem onteiro----" << endl;
+    cout << endl << "--antes sem ponteiro----" << endl;
     cout << "p1: " << p1 <<endl;
     cout << "p2: " << p2 <<endl;
     cout << "p3: " << p3 <<endl;
@@ -213,5 +214,11 @@ main(){
 
 return 0;
 }
-_______________________________________
+// tamanho de um vetor sizeof
+    int vet[4] ={1,15,16,7};
+    int nun1;
+    int tamanhoVet;    
+    cout << "sizeof vet: " << sizeof(vet) << endl;
+    cout << "sizeof int: " << sizeof(nun1) << endl;
+    cout << "Quantidade de elementos do vetor: " << sizeof(vet)/sizeof(int) << endl;_______________________________________
     */
