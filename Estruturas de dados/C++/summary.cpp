@@ -221,4 +221,20 @@ return 0;
     cout << "sizeof vet: " << sizeof(vet) << endl;
     cout << "sizeof int: " << sizeof(nun1) << endl;
     cout << "Quantidade de elementos do vetor: " << sizeof(vet)/sizeof(int) << endl;_______________________________________
+    /*
+    int** alocarMatriz(int Linhas,int Colunas){ //Recebe a quantidade de Linhas e Colunas como Parâmetro
+    
+//função geradora de matrizes    
+    int i,j; //Variáveis Auxiliares
+    
+    int **m = (int**)malloc(Linhas * sizeof(int*)); //Aloca um Vetor de Ponteiros
+    
+    for (i = 0; i < Linhas; i++){ //Percorre as linhas do Vetor de Ponteiros
+        m[i] = (int*) malloc(Colunas * sizeof(int)); //Aloca um Vetor de Inteiros para cada posição do Vetor de Ponteiros.
+        for (j = 0; j < Colunas; j++){ //Percorre o Vetor de Inteiros atual.
+                m[i][j] = 0; //Inicializa com 0.
+        }
+    }
+    return m; //Retorna o Ponteiro para a Matriz Alocada
+}
     */

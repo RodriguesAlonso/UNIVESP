@@ -54,25 +54,60 @@ void Desafio02::ex07()const{
             cout << "Insert the["<<i<<"]["<< j<<"] elements of the matrix01:"<<endl;
             cin >> matrix[i][j];
         }
-        cout << endl;
     }
+    int** matrix02 = (int**)malloc(rows * sizeof(int*));
+    for (int i = 0; i < rows; i++)
+    {
+        matrix02[i] = (int*)malloc(columns * sizeof(int));
+        for (int j = 0; j < columns; j++)
+        {
+            cout << "Insert the["<<i<<"]["<< j<<"] elements of the matrix02:"<<endl;
+            cin >> matrix02[i][j];
+        }
+    }
+    int** matrixSoma = (int**)malloc(rows * sizeof(int*));
+    for (int i = 0; i < rows; i++)
+    {
+        matrixSoma[i] = (int*)malloc(columns * sizeof(int));
+        for (int j = 0; j < columns; j++)
+        {
+            matrixSoma[i][j] = matrix02[i][j] + matrix[i][j];
+        }
+        
+    }
+
+    cout<<"-=matrix01=-"<<endl;
     for (int i = 0; i < rows; i++){
         for (int j = 0; j < columns; j++)
         {
             cout<< matrix[i][j] << " ";
         }
         cout<<endl;
-    }    
-        /* code */
-    
-    
-           //cout << "Insert the["<<i<<"]["<< j<<"] elements of the matrix01:"<<endl;
+    }
+    cout<<"-=-=-=-"<<endl;
+    cout<<"-=matrix02=-"<<endl;
+    for (int i = 0; i < rows; i++){
+        for (int j = 0; j < columns; j++)
+        {
+            cout<< matrix02[i][j] << " ";
+        }
+        cout<<endl;
+    }
+    cout<<"-=matrixSoma=-"<<endl;
+    for (int i = 0; i < rows; i++){
+        for (int j = 0; j < columns; j++)
+        {
+            cout<< matrixSoma[i][j] << " ";
+        }
+        cout<<endl;
+    }
+    cout<<"-=-=-=-"<<endl;    
 }
 void Desafio02::ex08()const{
 
 }
 void Desafio02::ex09()const{
-
+    
 }
 void Desafio02::ex010()const{
 
