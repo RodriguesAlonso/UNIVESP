@@ -1,5 +1,5 @@
 #include<iostream>
-#include"aluno.h";
+#include"aluno.h"
 
 using std::cout;
 using std::cin;

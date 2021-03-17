@@ -56,7 +56,7 @@ void Hash::retriveItem(Aluno& aluno, bool& found){
 }void Hash::print(){
     for (int i = 0; i < max_items; i++)
     {
-        cout << i << ": " << "Aluno: "<<structure[i].getNome() <<" RA: "<< structure[i].getRa();
+        cout << endl << i << ": " << "Aluno: "<<structure[i].getNome() <<" RA: "<< structure[i].getRa();
     }
     
 }
