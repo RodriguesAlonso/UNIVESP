@@ -28,11 +28,35 @@ int Hash::getHash(Aluno aluno){
 void Hash::insertItem(Aluno aluno){
     if (!isFull())
     {
-        
+        int location = getHash(aluno);
+        structure[location] = aluno;
+        length++;
+    }else{
+        throw "Structure already full";
     }
-    
+}
+
+void Hash::deleteItem(Aluno aluno){
+    int location = getHash(aluno);
+    structure[location] = Aluno();
+    length--;
 }
 
 void Hash::retriveItem(Aluno& aluno, bool& found){
-
+    int location = getHash(aluno);
+    Aluno aux = structure[location];
+    if (aux.getRa() != aluno.getRa())
+    {
+        found = false;
+    }else{
+        found = true;
+        aluno = aux;
+    }
+    
+}void Hash::print(){
+    for (int i = 0; i < max_items; i++)
+    {
+        cout << i << ": " << "Aluno: "<<structure[i].getNome() <<" RA: "<< structure[i].getRa();
+    }
+    
 }
