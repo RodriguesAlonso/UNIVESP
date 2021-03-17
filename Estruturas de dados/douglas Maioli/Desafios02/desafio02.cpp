@@ -6,6 +6,7 @@ using std:: cin;
 using std:: cout;
 using std::endl;
 
+
 void Desafio02::ex06() const{
     float familia[5];
     float mean;
@@ -132,10 +133,9 @@ void Desafio02::ex08()const{
  }
 }
 void Desafio02::ex09()const{
-    int idade01, idade02, media;
-    int *p1 = &idade01;
-    int *p2 = &idade02;
-    int *p3 = &media;
+    int *p1 = new int;
+    int *p2 = new int;
+    float *p3 = new float;
 
     cout<<"idade 01?: ";
     cin >> *p1;
@@ -143,9 +143,16 @@ void Desafio02::ex09()const{
     cin >> *p2;
     *p3 = (*p1 + *p2)/2;
     cout << "Media = "<< *p3<<endl;
-    cout <<"idade01 = " << idade01 <<" idade02 = "<< idade02 << " Media = " << media;
-    
 }
-void Desafio02::ex010()const{
-
+int* Desafio02::ex010(int* &p,int* &q){
+    cout <<"-=-=ANTES-=-=-="<<endl;
+    cout <<"*p = "<<*p<<" *q = "<< *q<<endl;
+    cout <<"p = "<<p<<" q = "<< q<<endl;
+    int temp  = *p;
+    *p = *q;
+    *q = temp;
+    cout << endl <<"-=-=DEPOIS-=-=-="<<endl;
+    cout <<"*p = "<<*p<<" *q = "<< *q<<endl;
+    cout <<"p = "<<p<<" q = "<< q<<endl;
+    return 0;
 }

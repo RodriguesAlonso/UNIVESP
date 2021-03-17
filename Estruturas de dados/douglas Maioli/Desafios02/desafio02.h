@@ -8,7 +8,7 @@ public:
     void ex07() const;//Soma entre matrizes.
     void ex08() const;//Gerador de vetores.
     void ex09() const;//Média usando ponteiros.
-    void ex010() const;
+    int* ex010(int* &p, int* &q);//Troca valor de ponteiros
 };
 
 

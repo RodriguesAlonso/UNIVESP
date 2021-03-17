@@ -117,7 +117,7 @@ int main()
         }
     void valor_modificando_memoria(int* p)    
         {
-        *p = 8; // modifica o valor do enderço de memoria fora da função
+        *p = 8; // modifica o valor dentro do enderço de memoria fora da função
         }
     void referencia(int*& p){
         p = new int; // novo endereço de memória
