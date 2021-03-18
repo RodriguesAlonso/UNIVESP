@@ -6,7 +6,7 @@ using namespace std;
 Hash::Hash(int max){
     length = 0;
     max_item = max;
-    Hash* structure;
+    structure = new Aluno[max_item];
 }
 
 Hash::~Hash(){
@@ -40,5 +40,5 @@ void Hash::deleteItem(Aluno aluno){
 
 }
 void Hash::insertItem(Aluno aluno){
-    
+
 }
