@@ -1,21 +1,44 @@
-#include"aluno.h"
+#include<iostream>
+#include"hash.h"
 
-class Hash{
-    private:
-    Aluno* structure;
-    int max_item;
-    int length;
-    int getHash(Aluno aluno);
+using namespace std;
 
-    public:
-    Hash(int max_item = 100);
-    ~Hash();
+Hash::Hash(int max){
+    length = 0;
+    max_item = max;
+    Hash* structure;
+}
 
-    bool isFull();
-    int getlength();
-    int retriveItem(Aluno& Aluno, bool& found);
-    void deleteItem(Aluno aluno);
-    void insertItem(Aluno aluno);
-    void print();
+Hash::~Hash(){
+    delete []structure;
+}
 
-};
+int Hash::getHash(Aluno aluno){
+    return aluno.getRa() % max_item;
+    }
+
+bool Hash::isFull(){
+    return length == max_item;
+}
+
+int Hash::getlength(){
+    return length;
+}
+
+void Hash::print(){
+    for (int i = 0; i < max_item; i++)
+    {
+        cout <<i <<"- Aluno: "<< structure[i].getName() <<", RA: "<<structure[i].getRa()<<endl;
+    }
+        
+}
+
+void Hash::retriveItem(Aluno& aluno, bool& found){
+
+}
+void Hash::deleteItem(Aluno aluno){
+
+}
+void Hash::insertItem(Aluno aluno){
+    
+}

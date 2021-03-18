@@ -12,7 +12,7 @@ Aluno::Aluno(){
     this->name = "";
 }
 
-string Aluno::getname(){
+string Aluno::getName(){
     return name;
 }
 int Aluno::getRa(){

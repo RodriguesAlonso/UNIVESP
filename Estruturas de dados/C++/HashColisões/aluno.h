@@ -10,6 +10,6 @@ class Aluno{
     Aluno();
     Aluno(int ra, string name);
     int getRa();
-    string getname();
+    string getName();
 
 };
