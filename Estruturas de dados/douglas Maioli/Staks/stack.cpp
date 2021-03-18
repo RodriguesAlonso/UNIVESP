@@ -46,5 +46,7 @@ void Stack::print(){
     {
         cout << "structure [" << i << "] = " << structure[i] << endl;
     }
-
+}
+int Stack::size(){
+    return length;
 }

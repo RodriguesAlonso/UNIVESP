@@ -11,6 +11,7 @@ class Stack{
      void push(ItemType);
      ItemType pop();
      void print();
+     int size();
 
      private:
      int length;
