@@ -52,6 +52,13 @@ void Hash::retriveItem(Aluno& aluno, bool& found){
     }
 }
 void Hash::deleteItem(Aluno aluno){
+    int startLocation = getHash(aluno);
+    int location = startLocation;
+    bool moreSearch = true;
+do
+{
+    /* code */
+} while (startLocation == location && moreSearch);
 
 }
 void Hash::insertItem(Aluno aluno){
