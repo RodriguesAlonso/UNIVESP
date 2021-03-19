@@ -1,5 +1,5 @@
 
-nomes=["ulisses17", "arthur10", "danielle12", "christina11", "paula11"]
+'''nomes=["ulisses17", "arthur10", "danielle12", "christina11", "paula11"]
 a = 1
 e = 3
 i = 5
@@ -17,4 +17,8 @@ for n in "paula":
         soma += o
     elif('u' in n):
         soma += u
-print (soma)
+print (soma)'''
+
+vetor = [25, 32, 11, 24, 14, 37, 92, 51, 43]
+for x in vetor:
+    print (x % 11)
