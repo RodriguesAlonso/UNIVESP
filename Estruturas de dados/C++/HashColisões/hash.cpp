@@ -57,10 +57,30 @@ void Hash::deleteItem(Aluno aluno){
     bool moreSearch = true;
 do
 {
-    /* code */
-} while (startLocation == location && moreSearch);
+    if (structure[location].getRa() == aluno.getRa() || structure[location].getRa() == -1 )
+    {
+        moreSearch = false;
+    }else{
+        location = (location + 1) % max_item;
+    }
+    
+} while (startLocation != location && moreSearch);
+if (structure[location].getRa() == aluno.getRa())
+{
+    structure[location] = Aluno(-2,"");
+    length--;
+}
 
 }
 void Hash::insertItem(Aluno aluno){
-
+    int location;
+    location = getHash(aluno);
+    while (structure[location].getRa() > 0)
+    {
+        location = (location + 1) % max_item;
+    }
+    structure[location] = aluno;
+    length++;
+    
+    
 }
