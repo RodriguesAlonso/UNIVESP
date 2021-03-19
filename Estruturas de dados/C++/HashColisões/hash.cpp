@@ -34,7 +34,22 @@ void Hash::print(){
 }
 
 void Hash::retriveItem(Aluno& aluno, bool& found){
-
+    int startlocation = getHash(aluno);
+    bool moreSearch = true;
+    int location = startlocation;
+    do
+    {
+        if (structure[location].getRa() == aluno.getRa() || structure[location].getRa() == -1)
+    {
+        moreSearch = false;
+    }else{
+        location = (location +1) % max_item;
+    }
+    } while (location != startlocation && moreSearch);
+    found = structure[location].getRa() == aluno.getRa();
+    if(found){
+        aluno = structure[location];
+    }
 }
 void Hash::deleteItem(Aluno aluno){
 
