@@ -5,7 +5,7 @@ class Hash{
     Aluno* structure;
     int max_item;
     int length;
-    int getHash();
+    int getHash(Aluno aluno);
 
     public:
     Hash(int maxItem = 100);
