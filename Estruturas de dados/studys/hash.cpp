@@ -27,9 +27,9 @@ int Hash::getLength(){
 }
 
 void Hash::print(){
-    for (int i = 0; i < length; i++)
+    for (int i = 0; i < max_item; i++)
     {
-        cout << i << "Aluno: " << structure[i].getName() << "RA: " << structure[i].getRa() <<endl;
+        cout << i << ")Aluno: " << structure[i].getName() << "\t  RA: " << structure[i].getRa() <<endl;
     }
     
 }
@@ -52,6 +52,9 @@ void Hash::retriveItem(Aluno& aluno, bool& found){
         aluno = structure[location];
 }
 
+
+
+
 void Hash::deleteItem(Aluno aluno){
     int startLocation = getHash(aluno);
     int location = startLocation;
@@ -61,8 +64,9 @@ void Hash::deleteItem(Aluno aluno){
         if (structure[location].getRa() == aluno.getRa() || structure[location].getRa() == -1)
         {
             moreSearch = false;
-        }
+        }else{
         location = (location + 1) % max_item;
+        }
     } while (location != startLocation && moreSearch);
     if (structure[location].getRa() == aluno.getRa())
     {
