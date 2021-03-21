@@ -1,19 +1,25 @@
-function soma(num1, num2) {
-    var num1 = 2;
-    var num2 = 5;
-    var soma = 0;
-    soma = num1 + num2;
-    return soma;
+/*function alert(){
+    alert("Alert");
 }
-function mean(){
-    return mean = soma(10, 5)/10
-
-}
-function situationShow(){
-    mean = 10
-    if(mean >=7 ){
-        alert("Passed");
-    }else{
-        alert("Failed")
+function confirm(){
+    answer = confirm("Confirm")
+    if (resposta == 1) {
+        return true;
+    } else {
+        return false;
+        
     }
+}
+
+function enter(){
+    name1 = prompt("Name");
+    return name1
+}*/
+function askAddress(){
+    do {
+        address = prompt("Enter your address:");    
+        confirm = confirm("Your address are: " + address);
+    } while (!confirm);
+    alert("The page will be changed...");
+    document.write("Your address is " +address+".");
 }
