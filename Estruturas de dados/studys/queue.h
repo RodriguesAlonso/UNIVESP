@@ -15,7 +15,7 @@ class Queue{
     bool isFull();
     bool isEmpty();
     void print();
-    void enqueue(ItemType);
+    void enqueue(ItemType item);
     ItemType dequeue();
 
 };
