@@ -1,4 +1,5 @@
 #include"item_type.h";
+const int MAX_ITEM = 100;
 
 class Stack{
     private:
@@ -12,4 +13,8 @@ class Stack{
 
     bool isFull();
     bool isEmpty();
+
+    void push(ItemType item);
+    ItemType pop();
+    void print();
 };
