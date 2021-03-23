@@ -38,13 +38,42 @@ bool Stack::isEmpty(){
     return topNode == NULL;
 }
 void Stack::print(){
-    node* tempNode;
+    node* tempNode = topNode;
+    cout<< "Stack: [ ";
+    while (topNode != null)
+    {
+        cout<< tempNode -> item<<" ";]
+        tempNode = tempNode->next;
+    }
+    cout<< "Stack: ]"
+    
 
 }
 
 void Stack::push(ItemType item){
+    if (!isFull())
+    {
+        node* newNode = new node;
+        newNode ->item = item;
+        newNode ->next= topNode;
+        topNode = newNode;
+    }else{
+        throw "Stack is full"
+    }
+    
 
 }
 ItemType Stack::pop(){
+    if (isEmpty())
+    {   
+        ItemType item = topnode->valor;
+        node* tempNode = topNode;
+        topNode = topNode ->next;
+        delete tempNode;
+        return item;
+    }else{
+        throw "Stack is empty"
+    }
+    
 
 }
