@@ -11,12 +11,12 @@ Queue::Queue(){
     rear = NULL;
 }
 Queue::~Queue(){
+    NodeType* tempPtr;
     while (front != NULL)
     {
-        NodeType* tempPtr;
         tempPtr = front;
         front = front->next;
-        delete [] tempPtr;
+        delete tempPtr;
     }
     rear = NULL;
 }
