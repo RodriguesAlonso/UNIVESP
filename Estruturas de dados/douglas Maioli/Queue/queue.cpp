@@ -9,7 +9,7 @@ using std::endl;
 Queue::Queue(){
     front = NULL;
     rear = NULL;
-};
+}
 Queue::~Queue(){
     while (front != NULL)
     {
@@ -19,7 +19,7 @@ Queue::~Queue(){
         delete [] tempPtr;
     }
     rear = NULL;
-};
+}
 
 bool Queue::isFull(){
     NodeType* location;
@@ -33,10 +33,10 @@ bool Queue::isFull(){
     {
         cout << "It is not possible to allocation another node";
     }
-};
+}
 bool Queue::isEmpty(){
     return (front == rear);
-};
+}
     
 void Queue::enQueue(ItemType item){
     if (!isFull())
@@ -58,7 +58,7 @@ void Queue::enQueue(ItemType item){
     }
     
 
-};
+}
 ItemType Queue::deQueue()
 {
     if (!isEmpty())
@@ -75,7 +75,7 @@ ItemType Queue::deQueue()
     }else{
            throw "Queue is empty.";
     }
-};
+}
 void Queue::print(){
     while (front != NULL)
     {
