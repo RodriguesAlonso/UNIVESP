@@ -1,11 +1,15 @@
 typedef int ItemType;
-struct Node
+struct NodeType
 {
     ItemType info;
-    Node* next;
+    NodeType* next;
 };
 
 class Queue{
+    private:
+    NodeType* front;
+    NodeType* rear;
+
     public:
     Queue();
     ~Queue();
