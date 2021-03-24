@@ -14,7 +14,7 @@ class Queue{
     Queue();
     ~Queue();
 
-    bool isfull();
+    bool isFull();
     bool isEmpty();
     
     void enQueue(ItemType item);
