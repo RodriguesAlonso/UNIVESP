@@ -1,0 +1,22 @@
+python -m venv venv
+python pip install django
+python .\manage.py runserver
+python .\manage.py sqlmigrate auth 0001
+python .\manage.py sqlmigrate sessions 0001
+python.\ manage.py showmigrations
+python.\ manage.py migrate
+python.\ manage.py startapp blog
+
+models.py
+    from django.db import models
+    from django.contrib.auth.models import User 
+        class post
+            title, slug, author, body, created, update.
+
+apps.py pegar os dados para inserir no setting.
+setting > installed_APPS =
+"blog.apps.BlogConfig",
+
+python .\manage.py makemigrations blog
+python .\manage.py sqlmigrate blog 0001
+python .\manage.py migrte blog
