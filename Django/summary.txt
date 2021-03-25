@@ -32,3 +32,20 @@ admin.site.register(Post)
 class PostAdmin(admin.ModelAdmin):
     list_display =
     prepopulated_fields = {'slug':('title',)}
+
+
+    pip install ipython
+    from blog.models import Post
+    posts = Post.objects.all()
+    post
+    post = Post.objects.get(id=1)
+    post.author
+    post.created
+    post.title
+    post.title = "Meu Primeiro Artigo"
+    post.save()
+    Post.objects.filter(author_username="joaoa")
+    from django.contrib.auth.models import User
+    user = User.objects.get(username="joaoa")
+    user
+    user.post_set.all()
