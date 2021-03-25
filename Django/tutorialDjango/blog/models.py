@@ -8,4 +8,7 @@ class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE) #Author tem um id quando o Author é deletados todos seus posts são deletados.
     body = models.TextField()
     created = models.DateTimeField(auto_now_add=True) #data creada automática quando um post é criado.
-    update = models.DateTimeField(auto_now=True) 
+    updated = models.DateTimeField(auto_now=True) 
+
+    def __str__(self) -> str:
+        return self.title

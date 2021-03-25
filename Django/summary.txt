@@ -20,3 +20,15 @@ setting > installed_APPS =
 python .\manage.py makemigrations blog
 python .\manage.py sqlmigrate blog 0001
 python .\manage.py migrte blog
+
+python,\manage.py createsuperuser
+127.0.0.1:8000/admin
+
+setting > lenguage code "pt-br"
+
+admin.py
+from .models import Post
+admin.site.register(Post)
+class PostAdmin(admin.ModelAdmin):
+    list_display =
+    prepopulated_fields = {'slug':('title',)}
