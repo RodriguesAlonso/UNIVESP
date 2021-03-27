@@ -28,8 +28,6 @@ bool BinarySearchTree::isFull(){
     {
         return true;
     }
-    
-
 }
 bool BinarySearchTree::isEmpty(){
     return (raiz == NULL);
@@ -37,6 +35,43 @@ bool BinarySearchTree::isEmpty(){
 }
 
 void BinarySearchTree::insert(Aluno aluno){
+    if (!isFull())
+    {
+        Node* newNode = new Node;
+        newNode->aluno = aluno;
+        newNode->filhoDireita = NULL;
+        newNode->filhoEsquerda = NULL;
+        if (isEmpty)
+        {
+            raiz = newNode;
+        }else{
+            Node* temp = raiz;
+            while (temp !=NULL)
+            {
+                if (aluno.getName() < temp->aluno.getName())
+                {
+                    if (temp->filhoEsquerda == NULL)
+                    {
+                        temp->filhoEsquerda = newNode;
+                        break;
+                    }else{
+                        temp = temp ->filhoEsquerda;
+                    }
+                }else{
+                    if (temp->filhoDireita == NULL)
+                    {
+                        temp->filhoDireita = newNode;
+                        break;
+                    }else{
+                        temp = temp ->filhoDireita;
+                    }
+                }
+            }
+        }
+    }else{
+        throw "Tree is full.";
+    }
+    
 
 }
 void BinarySearchTree::remove(Aluno aluno){
