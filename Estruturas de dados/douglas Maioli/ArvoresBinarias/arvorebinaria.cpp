@@ -1,20 +1,7 @@
 #include <iostream>
-#include "aluno.h"
-
-struct Node
-{
-    Aluno aluno;
-    Node* filhoDireita;
-    Node* filhoEsquerda;
-};
 
 
-class BinarySearchTree{
-    private:
-    Node* raiz;
-
-    public:
-    BinarySearchTree();
+BinarySearchTree();
     ~BinarySearchTree();
     void deleteTree(Node* noAtual);
 
@@ -29,5 +16,3 @@ class BinarySearchTree{
     void printPreOrdem(Node* noAtual);
     void printOrdem(Node* noAtual);
     void printPosOrdem(Node* noAtual);
-
-};
