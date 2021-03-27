@@ -78,7 +78,23 @@ void BinarySearchTree::remove(Aluno aluno){
 
 }
 void BinarySearchTree::busca(Aluno& aluno, bool& found){
-
+    found = false;
+    Node* noAtual = raiz;
+    while (noAtual != NULL)
+    {
+        if (aluno.getRa() < noAtual->aluno.getRa())
+        {
+            noAtual = noAtual ->filhoEsquerda;
+        }
+        else if (aluno.getRa() > noAtual->aluno.getRa())
+        {
+            noAtual = noAtual ->filhoDireita;
+        }else{
+            found = true;
+            aluno = noAtual->aluno;
+            break;
+        }
+    }
 }
 
 void BinarySearchTree::printPreOrdem(Node* noAtual){
