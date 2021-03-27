@@ -1,18 +1,57 @@
 #include <iostream>
+#include <cstddef>
+#include "arvorebinaria.h"
 
+using namespace std;
 
-BinarySearchTree();
-    ~BinarySearchTree();
-    void deleteTree(Node* noAtual);
+BinarySearchTree::BinarySearchTree(){
+    raiz = NULL;
+}
+BinarySearchTree::~BinarySearchTree(){
 
-    Node* getRaiz();
-    bool isFull();
-    bool isEmpty();
+}
+void BinarySearchTree::deleteTree(Node* noAtual){
+    
+}
 
-    void insert(Aluno aluno);
-    void remove(Aluno aluno);
-    void busca(Aluno& aluno, bool& found);
+Node* BinarySearchTree::getRaiz(){
+    return raiz;
+}
+bool BinarySearchTree::isFull(){
+    try
+    {
+        Node* temp = new Node;
+        delete temp;
+        return false;
+    }
+    catch(bad_alloc exception())
+    {
+        return true;
+    }
+    
 
-    void printPreOrdem(Node* noAtual);
-    void printOrdem(Node* noAtual);
-    void printPosOrdem(Node* noAtual);
+}
+bool BinarySearchTree::isEmpty(){
+    return (raiz == NULL);
+
+}
+
+void BinarySearchTree::insert(Aluno aluno){
+
+}
+void BinarySearchTree::remove(Aluno aluno){
+
+}
+void BinarySearchTree::busca(Aluno& aluno, bool& found){
+
+}
+
+void BinarySearchTree::printPreOrdem(Node* noAtual){
+
+}
+void BinarySearchTree::printOrdem(Node* noAtual){
+
+}
+void BinarySearchTree::printPosOrdem(Node* noAtual){
+
+}
