@@ -94,7 +94,24 @@ void BinarySearchTree::removerbusca(Aluno aluno, Node*& noAtual)
     
 }
 void BinarySearchTree::deletarNode(Node*& noAtual){
-
+    Node* temp = noAtual;
+    if (noAtual->filhoEsquerda == NULL)
+    {
+        noAtual = noAtual->filhoDireita;
+        delete temp;
+    }else if (noAtual->filhoDireita == NULL)
+    {
+        noAtual = noAtual->filhoEsquerda;
+        delete temp;
+    }else{
+        Aluno alunoSucessor;
+        obterSucessor(alunoSucessor, noAtual);
+        noAtual->aluno = alunoSucessor;
+        removerbusca(alunoSucessor, noAtual->filhoDireita);
+    }
+    
+    
+     
 }
 void BinarySearchTree::obterSucessor(Aluno& AlunoSucessor,Node* noTemp){
     
