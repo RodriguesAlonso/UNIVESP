@@ -75,7 +75,29 @@ void BinarySearchTree::insert(Aluno aluno){
 
 }
 void BinarySearchTree::remove(Aluno aluno){
+    removerbusca(aluno, raiz);
+}
+void BinarySearchTree::removerbusca(Aluno aluno, Node*& noAtual)
+{
+    if (aluno.getRa() < noAtual->aluno.getRa())
+    {
+        removerbusca(aluno, noAtual->filhoEsquerda);
+    }
+    else if (aluno.getRa() > noAtual->aluno.getRa())
+    {
+        removerbusca(aluno, noAtual->filhoDireita);
+    }
+    else
+    {
+        deletarNode(noAtual);
+    }
+    
+}
+void BinarySearchTree::deletarNode(Node*& noAtual){
 
+}
+void BinarySearchTree::obterSucessor(Aluno& AlunoSucessor,Node* noTemp){
+    
 }
 void BinarySearchTree::busca(Aluno& aluno, bool& found){
     found = false;
