@@ -25,6 +25,9 @@ class BinarySearchTree{
     void insert(Aluno aluno);
     void remove(Aluno aluno);
     void busca(Aluno& aluno, bool& found);
+    void removerbusca();
+    void deletarNode();
+    void obterSucessor();
 
     void printPreOrdem(Node* noAtual);
     void printOrdem(Node* noAtual);
