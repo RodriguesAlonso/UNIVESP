@@ -24,4 +24,8 @@ class SearchTree{
     void printerPreOrder() const;
     void PrinterInOrder() const;
     void PrinterPosOrder() const;
+
+    private:
+
+    
 };
