@@ -143,7 +143,17 @@ void BinarySearchTree::busca(Aluno& aluno, bool& found){
 }
 
 void BinarySearchTree::printPreOrdem(Node* noAtual){
+    if (noAtual !=NULL)
+    {
+        cout << "Nome: " << noAtual->aluno.getRa();
+        cout << ", RA: " << noAtual->aluno.getName() << endl;
 
+        printPreOrdem(noAtual->filhoEsquerda);
+
+        printPreOrdem(noAtual->filhoDireita);
+    }
+    
+     
 }
 void BinarySearchTree::printOrdem(Node* noAtual){
 
