@@ -156,8 +156,21 @@ void BinarySearchTree::printPreOrdem(Node* noAtual){
      
 }
 void BinarySearchTree::printOrdem(Node* noAtual){
+    if (noAtual != NULL)
+    {
+        printOrdem(noAtual->filhoEsquerda);
+        cout << "Nome: " << noAtual->aluno.getRa();
+        cout << ", RA: " << noAtual->aluno.getName() << endl;
+        printOrdem(noAtual->filhoEsquerda);
+    }
+    
 
 }
 void BinarySearchTree::printPosOrdem(Node* noAtual){
+
+    cout << "Nome: " << noAtual->aluno.getRa();
+    cout << ", RA: " << noAtual->aluno.getName() << endl;
+
+    
 
 }
