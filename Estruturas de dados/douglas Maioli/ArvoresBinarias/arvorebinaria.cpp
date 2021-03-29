@@ -8,9 +8,15 @@ BinarySearchTree::BinarySearchTree(){
     raiz = NULL;
 }
 BinarySearchTree::~BinarySearchTree(){
-
+    deleteTree(raiz);
 }
 void BinarySearchTree::deleteTree(Node* noAtual){
+    if (noAtual != NULL)
+    {
+        deleteTree(noAtual->filhoEsquerda);
+        deleteTree(noAtual->filhoDireita);
+        delete noAtual;
+    }
     
 }
 
@@ -168,9 +174,13 @@ void BinarySearchTree::printOrdem(Node* noAtual){
 }
 void BinarySearchTree::printPosOrdem(Node* noAtual){
 
-    cout << "Nome: " << noAtual->aluno.getRa();
-    cout << ", RA: " << noAtual->aluno.getName() << endl;
-
+    if (noAtual != NULL)
+    {
+        printPosOrdem(noAtual->filhoEsquerda);
+        printPosOrdem(noAtual->filhoDireita);
+        cout << "Nome: " << noAtual->aluno.getRa();
+        cout << ", RA: " << noAtual->aluno.getName() << endl;
+    }
     
 
 }
