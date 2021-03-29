@@ -47,7 +47,7 @@ void BinarySearchTree::insert(Aluno aluno){
         newNode->aluno = aluno;
         newNode->filhoDireita = NULL;
         newNode->filhoEsquerda = NULL;
-        if (isEmpty)
+        if (raiz == NULL)
         {
             raiz = newNode;
         }else{
@@ -162,6 +162,8 @@ void BinarySearchTree::printPreOrdem(Node* noAtual){
      
 }
 void BinarySearchTree::printOrdem(Node* noAtual){
+    
+    
     if (noAtual != NULL)
     {
         printOrdem(noAtual->filhoEsquerda);

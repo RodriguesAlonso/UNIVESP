@@ -14,6 +14,11 @@ int main(){
         alunos[i] = aluno;
         arvoreAlunos.insert(aluno);
     }
-    arvoreAlunos.printOrdem();
+    arvoreAlunos.printOrdem(arvoreAlunos.getRaiz());
+    cout << endl<<"-=-=-=-=-=-="<< endl;
+    arvoreAlunos.printPosOrdem(arvoreAlunos.getRaiz());
+    cout << endl<<"-=-=-=-=-=-="<< endl;
+    arvoreAlunos.printPreOrdem(arvoreAlunos.getRaiz());
+    
 
 }
