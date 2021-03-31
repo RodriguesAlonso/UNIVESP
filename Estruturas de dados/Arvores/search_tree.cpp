@@ -34,18 +34,56 @@ void SearchTree::retriveAluno(Nodetype* tree, Aluno& aluno, bool& found) const
     {
         found = false;
     }
-    else if ()
+    else if ((aluno.getRa()) < tree->aluno.getRa())
     {
-        retriveAluno(tree->esquerda, item, found);
+        retriveAluno(tree->esquerda, aluno, found);
+    }
+    else if (aluno.getRa() < tree->aluno.getRa())
+    {
+        retriveAluno(tree->direita, aluno, found);
+    }
+    else
+    {
+        aluno = tree->aluno;
+        found = true;
     }
     
     
+    
 }
-void SearchTree::insertAluno(Nodetype*& tree, Aluno item)
-void SearchTree::deleteAluno(Nodetype*& tree, int aluno)
-void SearchTree::deleteNode(Nodetype*& tree)
-void SearchTree::getSucessor(Nodetype* tree, Aluno& data)
+void SearchTree::insertAluno(Nodetype*& tree, Aluno aluno)
+{
+    if (tree == NULL)
+    {
+        tree = new Nodetype;
+        tree->direita = NULL;
+        tree->esquerda = NULL;
+    }
+    else if (aluno.getRa() < tree->aluno.getRa())
+    {
+        insertAluno(tree->esquerda, aluno);
+    }
+    else if (aluno.getRa() > tree->aluno.getRa())
+    {
+        insertAluno(tree->direita,aluno);
+    }
+}
+void SearchTree::deleteAluno(Nodetype*& tree, int aluno) {
+
+}
+void SearchTree::deleteNode(Nodetype*& tree){
+
+}
+void SearchTree::getSucessor(Nodetype* tree, Aluno& data){
+
+}
         
-void SearchTree::printerPreOrder(Nodetype* tree) const
-void SearchTree::printerInOrder(Nodetype* tree) const
-void SearchTree::printerPosOrder(Nodetype* tree) const
+void SearchTree::printerPreOrder(Nodetype* tree) const{
+
+}
+void SearchTree::printerInOrder(Nodetype* tree) const{
+
+}
+void SearchTree::printerPosOrder(Nodetype* tree) const{
+
+}
