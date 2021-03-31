@@ -11,15 +11,35 @@ void SearchTree::destroyTree(Nodetype*& tree)
     
 }
 bool SearchTree::isFull() const{
+    Nodetype* location;
+    try
+    {
+        location = new Nodetype;
+        delete location;
+        return false;
+    }
+    catch(std::bad_alloc exception)
+    {
+        return true;
+    }
     
 }
 bool SearchTree::isEmpty() const{
     return root == NULL;
 }
 
-void SearchTree::retriveAluno(Nodetype* tree, Aluno& item, bool& found) const
+void SearchTree::retriveAluno(Nodetype* tree, Aluno& aluno, bool& found) const
 {
-
+    if (tree == NULL)
+    {
+        found = false;
+    }
+    else if ()
+    {
+        retriveAluno(tree->esquerda, item, found);
+    }
+    
+    
 }
 void SearchTree::insertAluno(Nodetype*& tree, Aluno item)
 void SearchTree::deleteAluno(Nodetype*& tree, int aluno)
