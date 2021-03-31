@@ -18,7 +18,7 @@ class SearchTree{
     bool isEmpty() const;
     void retriveAluno(Aluno& aluno, bool& found) const{retriveAluno(root, aluno, found);}
     
-    void insertAluno(Aluno item) {insertAluno(root, item);}
+    void insertAluno(Aluno aluno) {insertAluno(root, aluno);}
     void deleteAluno(int item) {deleteAluno(root, item);}
 
     void printerPreOrder() const {printerPreOrder(root);}

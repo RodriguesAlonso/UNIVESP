@@ -1,5 +1,6 @@
 #include "search_tree.h"
 
+
 void SearchTree::destroyTree(Nodetype*& tree)
 {
     if (tree != NULL)
@@ -55,14 +56,14 @@ void SearchTree::insertAluno(Nodetype*& tree, Aluno aluno)
         tree = new Nodetype;
         tree->direita = NULL;
         tree->esquerda = NULL;
+        tree->aluno = aluno;
     }
     else if (aluno.getRa() < tree->aluno.getRa())
     {
         insertAluno(tree->esquerda, aluno);
     }
-    else if (aluno.getRa() > tree->aluno.getRa())
-    {
-        insertAluno(tree->direita,aluno);
+    else{
+        insertAluno(tree->direita, aluno);
     }
 }
 void SearchTree::deleteAluno(Nodetype*& tree, int aluno) {
