@@ -69,17 +69,51 @@ void SearchTree::insertAluno(Nodetype*& tree, Aluno aluno)
     }
 }
 void SearchTree::deleteAluno(Nodetype*& tree, int aluno) {
-
+    if (aluno < tree->aluno.getRa())
+    {
+        deleteAluno(tree->esquerda, aluno);
+    }
+    else if (aluno > tree->aluno.getRa())
+    {
+        deleteAluno(tree->direita,aluno);
+    }
+    else if (aluno == tree->aluno.getRa())
+    {
+        deleteNode(tree);
+    }
 }
-void SearchTree::deleteNode(Nodetype*& tree){
-
+void SearchTree::deleteNode(Nodetype*& tree)
+{
+    Aluno data;
+    Nodetype* tempPtr;
+    tempPtr = tree;
+    if (tree->esquerda == NULL)
+    {
+        tree = tree->esquerda;
+        delete tempPtr;
+    }
+    else if (tree->direita == NULL)
+    {
+        tree = tree->esquerda;
+        delete tempPtr;
+    }else{
+        getSucessor(tree, data);
+        tree->aluno = data;
+        deleteAluno(tree->direita, data.getRa());
+    }
 }
-void SearchTree::getSucessor(Nodetype* tree, Aluno& data){
-
+void SearchTree::getSucessor(Nodetype* tree, Aluno& data)
+{
+    tree = tree->direita;
+    while (tree->esquerda !=NULL)
+    {
+        tree = tree->esquerda;
+    }
+    data = tree->aluno;
 }
-        
-void SearchTree::printerPreOrder(Nodetype* tree) const{
-
+void SearchTree::printerPreOrder(Nodetype* tree) const
+{
+    
 }
 void SearchTree::printerInOrder(Nodetype* tree) const{
 
