@@ -47,9 +47,6 @@ void SearchTree::retriveAluno(Nodetype* tree, Aluno& aluno, bool& found) const
         aluno = tree->aluno;
         found = true;
     }
-    
-    
-    
 }
 void SearchTree::insertAluno(Nodetype*& tree, Aluno aluno)
 {
