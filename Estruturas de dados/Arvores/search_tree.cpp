@@ -113,11 +113,25 @@ void SearchTree::getSucessor(Nodetype* tree, Aluno& data)
 }
 void SearchTree::printerPreOrder(Nodetype* tree) const
 {
-    
+    if (tree != NULL)
+    {
+        std::cout << tree->aluno.getNome() << ", ";
+        printerPreOrder(tree->esquerda);
+        printerPreOrder(tree->direita);
+    }
 }
 void SearchTree::printerInOrder(Nodetype* tree) const{
-
+    if (tree != NULL)
+    {
+        printerInOrder(tree->esquerda);
+        std::cout << tree->aluno.getNome() << ", ";
+        printerInOrder(tree->direita);
+    }
+    
 }
-void SearchTree::printerPosOrder(Nodetype* tree) const{
-
+void SearchTree::printerPosOrder(Nodetype* tree) const
+{
+    printerPosOrder(tree->esquerda);
+    printerPosOrder(tree->direita);
+    std::cout << tree->aluno.getNome() << ", ";
 }
