@@ -13,6 +13,19 @@ class Graph
     int** edges;
     bool* mark;
 
+    public:
+    Graph(int max = 50, int null = 0);
+    ~Graph();
+
+    void addVertex(Vertex);
+    void addEdge(Vertex, Vertex, int);
+
+    int getWeight(Vertex, Vertex);
+    void getAdjacents(Vertex, Queue&);
+    void clearMarks();
+    void markVertex(Vertex);
+    bool isMarked(Vertex);
+    void printMatrix();
     
 };
 
