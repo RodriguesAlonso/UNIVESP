@@ -68,9 +68,6 @@
                 rear->next = newNode;
                 rear = newNode;
             }
-            
-
-            
         }else{
             throw " Queue is full.";
         }
@@ -78,5 +75,19 @@
     }
 
     ItemType Queue::dequeue(){
-
+        if (!isEmpyt())
+        {
+            NodeType* tempPtr;
+            tempPtr = front;
+            ItemType item = front->info;
+            front = front->next;
+            if (front == rear)
+            {
+                rear = NULL;
+            }
+            delete tempPtr;
+            return item;
+        }else{
+            throw " Queue is empty.";
+        }
     }
