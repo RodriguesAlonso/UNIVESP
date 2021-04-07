@@ -57,17 +57,46 @@ using namespace std;
         throw "Vertex is full.";
     }
     void Graph::insertEdge(TypeItem end, TypeItem start, int weight){
+        int row  = getIndex(end);
+        int column  = getIndex(start);
+
+        adjacentMatrix[row][column] = weight;
+        adjacentMatrix[column][row] = weight;
 
     }
     int Graph::getWeight(TypeItem end, TypeItem start){
-
+        int row  = getIndex(end);
+        int column  = getIndex(start);
+        return adjacentMatrix[row][column];
     }
     int Graph::getGrade(TypeItem item){
-
+        int row = getIndex(item);
+        int grade = 0;
+        for (int i = 0; i < maxVertices; i++){
+            if (adjacentMatrix[row][i] != nullEdges)
+            {
+                grade++;
+            }
+        return grade;
+        }
     }
     void Graph::printMatrix(){
-
+        for (int i = 0; i < maxVertices; i++)
+        {
+            for (int j = 0; j < maxVertices; j++)
+            {
+                cout<< adjacentMatrix[i][j] << " ";
+            }
+            cout << endl;
+        }
+        
     }
     void Graph::printVertex(){
+        cout<< "vertices:\n";
+        for (int i = 0; i < numVertices; i++)
+        {
+            cout << i << ": " << vertex[i] << endl;
+        }
+        
 
     }
