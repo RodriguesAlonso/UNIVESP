@@ -12,7 +12,7 @@ class Graph
     int nullEdges;
     int maxVertices;
     int numVertices;
-    TypeItem vertex;
+    TypeItem* vertex;
     int** adjacentMatrix;
 
     public:

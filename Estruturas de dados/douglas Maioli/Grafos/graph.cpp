@@ -4,13 +4,36 @@
 using namespace std;
 
     Graph::Graph(int maxVertices, int nullEdges){
+        
+        this->numVertices = 0;
+        this->maxVertices = maxVertices;
+        this->nullEdges = nullEdges;
+
+        vertex = new TypeItem[maxVertices];
+
+        adjacentMatrix = new int*[maxVertices];
+        for (int i = 0; i < maxVertices; i++){
+            adjacentMatrix[i] = new int[maxVertices];
+        }
+        for (int i = 0; i < maxVertices; i++){
+            for (int j = 0; j < maxVertices; j++)
+            {
+                adjacentMatrix[i][j] = nullEdges;
+            }
+        }
+        
+
 
     }
     Graph::~Graph(){
-
+        delete [] vertex;
+        for (int i = 0; i < maxVertices; i++){
+            delete [] adjacentMatrix[i];
+        }
+        delete [] adjacentMatrix;
     }
     int Graph::getIndex(TypeItem item){
-
+        
     }
     bool Graph::isFull(){
 
@@ -31,5 +54,5 @@ using namespace std;
 
     }
     void Graph::printVertex(){
-        
+
     }
