@@ -6,7 +6,7 @@ using namespace std;
 
 typedef string TypeItem;
 
-class Grafo
+class Graph
 { 
     private:
     int nullEdges;
@@ -14,4 +14,19 @@ class Grafo
     int numVertices;
     TypeItem vertex;
     int** adjacentMatrix;
+
+    public:
+    Graph(int maxVertices, int nullEdges);
+    ~Graph();
+    int getIndex(TypeItem item);
+    bool isFull();
+    void insertVertex(TypeItem item);
+    void insertEdge(TypeItem end, TypeItem start, int weight);
+    int getWeight(TypeItem end, TypeItem start);
+    int getGrade(TypeItem item);
+    void printMatrix();
+    void printVertex();
+
+
+
 };
