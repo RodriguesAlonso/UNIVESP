@@ -33,13 +33,28 @@ using namespace std;
         delete [] adjacentMatrix;
     }
     int Graph::getIndex(TypeItem item){
-        
+        int index = 0;
+        while (item != vertex[index] && index < maxVertices)
+        {
+            index++;
+        }
+        if (index >= maxVertices)
+        {
+            throw "Vertex was not found.";
+        }else{
+        return index;
+        }
     }
     bool Graph::isFull(){
-
+        return (numVertices == maxVertices);
     }
     void Graph::insertVertex(TypeItem item){
-
+        if (!isFull())
+        {
+            vertex[numVertices] = item;
+            numVertices++;
+        }
+        throw "Vertex is full.";
     }
     void Graph::insertEdge(TypeItem end, TypeItem start, int weight){
 
