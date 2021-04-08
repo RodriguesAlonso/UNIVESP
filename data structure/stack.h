@@ -1,12 +1,19 @@
-#include <iostream>
+#include "node_type.h"
 
-class stack
+
+class Stack
 {
     private:
-    public:
-
-    void printStack();
+    nodeType* structure;
     
-    void push(item tu)
+    public:
+    Stack();
+    ~Stack();
 
+    bool isFull() const;
+    bool isEmpty() const;
+    void printStack() const;
+    
+    void push(ItemType item);
+    ItemType pop();
 };
