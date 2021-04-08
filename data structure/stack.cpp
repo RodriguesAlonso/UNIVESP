@@ -42,7 +42,6 @@ void Stack::printStack() const{
         tempPtr = tempPtr->next;
     }
     cout << endl;
-    
 
 }
     
@@ -60,6 +59,4 @@ void Stack::push(ItemType item){
     
 
 }
-ItemType Stack::pop(){
-
-}
+//ItemType Stack::pop(){  }

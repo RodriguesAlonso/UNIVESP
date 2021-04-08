@@ -15,5 +15,5 @@ class Stack
     void printStack() const;
     
     void push(ItemType item);
-    ItemType pop();
+    //ItemType pop();
 };
