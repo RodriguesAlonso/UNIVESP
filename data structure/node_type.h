@@ -1,7 +1,7 @@
 typedef char ItemType;
 
-struct nodeType
+struct NodeType
 {
     ItemType info;
-    nodeType* next;
+    NodeType* next;
 };
