@@ -4,7 +4,7 @@
 class Stack
 {
     private:
-    nodeType* structure;
+    NodeType* structure;
     
     public:
     Stack();
