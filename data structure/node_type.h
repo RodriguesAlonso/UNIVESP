@@ -1,4 +1,4 @@
-typedef char ItemType;
+typedef int ItemType;
 
 struct NodeType
 {
