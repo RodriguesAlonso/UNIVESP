@@ -17,7 +17,7 @@ int main(){
     }
     for (int i = 0; i < nun; i++)
     {
-        stack.push(i);
+        stack.push(lista[i]);
     }
     
     stack.printStack();
