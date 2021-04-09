@@ -19,7 +19,17 @@ int main(){
     {
         stack.push(lista[i]);
     }
-    
+    cout << "-=-=-=-=-=\n";
     stack.printStack();
+    cout << "\n-=-=-=-=-=\n";
+    for (int i = 0; i < nun; i++)
+    {
+        cout << "pop: " << stack.pop() <<endl;
+        stack.printStack();
+        cout << "\n-=-=-=-=-=\n";
+    }
+    
+    cout << stack.pop();
+
     return 0;
 };

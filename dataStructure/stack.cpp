@@ -36,12 +36,13 @@ bool Stack::isEmpty() const{
 }
 void Stack::printStack() const{
     NodeType* tempPtr = structure;
-    while (structure != NULL)
+    cout <<"stack [ ";
+    while (tempPtr != NULL)
     {
-        cout << tempPtr->info << "; ";
+        cout <<tempPtr->info << "; ";
         tempPtr = tempPtr->next;
     }
-    cout << endl;
+    cout << "]" << endl;
 
 }
     
@@ -52,10 +53,26 @@ void Stack::push(ItemType item){
         location->info = item;
         location->next = structure;
         structure = location;
+        length++;
     }else{
         throw "Stack is full.";
     }
     
 
 }
-//ItemType Stack::pop(){  }
+ItemType Stack::pop(){ 
+    if (!isEmpty())
+    {
+    NodeType* location;
+    location = structure;
+    ItemType item = structure->info;
+    structure = structure->next;
+    delete location;
+    length--;
+    return item;
+        
+    }else{
+        throw "stack is empty.";
+    }
+     
+}

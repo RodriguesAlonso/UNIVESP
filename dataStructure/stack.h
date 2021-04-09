@@ -5,6 +5,7 @@ class Stack
 {
     private:
     NodeType* structure;
+    ItemType length;
     
     public:
     Stack();
@@ -15,5 +16,5 @@ class Stack
     void printStack() const;
     
     void push(ItemType item);
-    //ItemType pop();
+    ItemType pop();
 };
