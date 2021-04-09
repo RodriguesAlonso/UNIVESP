@@ -46,8 +46,7 @@ void Stack::printStack() const{
 }
     
 void Stack::push(ItemType item){
-    if (isFull())
-    {
+    if (!isFull()){
         NodeType* location;
         location = new NodeType;
         location->info = item;
