@@ -9,7 +9,7 @@ class Queue{
     bool isEmpty() const;
     bool isFull() const;
 
-    void enqueue(ItemType item);
+    void enqueue(ItemType);
     ItemType dequeue();
     
     private:

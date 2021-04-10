@@ -6,10 +6,11 @@ using namespace std;
 
 Queue::Queue()
 {
-    front = NULL;
-    rear = NULL;
+    this->front = NULL;
+    this->rear = NULL;
 }
-Queue::~Queue(){
+Queue::~Queue()
+{
     NodeType* tempPtr;
     while (front !=NULL){
         tempPtr = front;
@@ -23,7 +24,8 @@ bool Queue::isEmpty() const
 {
     return (front == NULL);
 }
-bool Queue::isFull() const{
+bool Queue::isFull() const
+{
     NodeType* location;
     try
     {
@@ -31,45 +33,47 @@ bool Queue::isFull() const{
         delete location;
         return false;
     }
-    catch(std::bad_alloc exception)
-    {
+    catch(std::bad_alloc exception){
         return true;
     }
 }
 
-void Queue::printQueue() const{
+void Queue::printQueue() const
+{
     NodeType* locationTmp = front;
-    while (locationTmp != NULL)
+    while (front != NULL)
     {
-        cout << locationTmp->info << "; ";
+        cout << front->info;
         locationTmp = locationTmp->next;
     }
+    cout << endl;
 }
 
 void Queue::enqueue(ItemType item){
-    if (!isFull())
-    {
+    if (!isFull()){
         NodeType* newNode;
         newNode = new NodeType;
-        newNode->next = NULL;
         newNode->info = item;
+        newNode->next = NULL;
+        cout << endl << newNode->info;
         if (rear == NULL)
         {
             front = newNode;
-        }else{
-            rear->next = newNode;
-            rear = newNode;
         }
+        else{
+            rear->next = newNode;
+            }
+        rear = newNode;
+        cout << endl <<front->info;
+        cout << endl <<rear->info;
     }else{
         throw "Queue is full";
     }
-    
 }
 ItemType Queue::dequeue()
 {
     if (!isEmpty())
     {
-        cout << "FUNCIONA1";
         NodeType* tempPtr;
         tempPtr = front;
         ItemType item = front->info;
@@ -79,7 +83,6 @@ ItemType Queue::dequeue()
         delete tempPtr;
         return item;
     }else{
-        cout << "FUNCIONA2";
         throw "Queue is empty.";
     }
 }
