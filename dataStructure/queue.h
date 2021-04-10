@@ -5,6 +5,8 @@ class Queue{
     Queue();
     ~Queue();
 
+    void moveFront();
+
     void printQueue() const;
     bool isEmpty() const;
     bool isFull() const;

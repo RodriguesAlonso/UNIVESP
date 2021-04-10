@@ -38,15 +38,18 @@ bool Queue::isFull() const
     }
 }
 
+
 void Queue::printQueue() const
 {
-    NodeType* locationTmp = front;
-    while (front != NULL)
+    NodeType* tempPtr = front;
+  while (tempPtr != NULL)
     {
-        cout << front->info;
-        locationTmp = locationTmp->next;
+        cout <<"[";
+      cout << tempPtr->info;
+      tempPtr = tempPtr->next;
+      cout << "]";
     }
-    cout << endl;
+  cout << endl;
 }
 
 void Queue::enqueue(ItemType item){
@@ -55,7 +58,6 @@ void Queue::enqueue(ItemType item){
         newNode = new NodeType;
         newNode->info = item;
         newNode->next = NULL;
-        cout << endl << newNode->info;
         if (rear == NULL)
         {
             front = newNode;
@@ -64,8 +66,6 @@ void Queue::enqueue(ItemType item){
             rear->next = newNode;
             }
         rear = newNode;
-        cout << endl <<front->info;
-        cout << endl <<rear->info;
     }else{
         throw "Queue is full";
     }
