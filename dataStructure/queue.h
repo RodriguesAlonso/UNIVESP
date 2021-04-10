@@ -13,6 +13,6 @@ class Queue{
     ItemType dequeue();
     
     private:
-    NodeType front;
-    NodeType rear;
+    NodeType* front;
+    NodeType* rear;
 };

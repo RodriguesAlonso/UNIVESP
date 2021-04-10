@@ -1,35 +1,18 @@
 #include <iostream>
-#include "stack.h"
+#include "queue.h"
 
 using namespace std;
 
 int main(){
-    Stack stack;
-    int nun;
-    
-    cout << "Enter number of Item: ";
-    cin >> nun;
-    ItemType lista[nun];
-    for (int i = 0; i < nun; i++)
+    Queue queue;
+    int lista[5];
+    for (int i = 0; i < 5; i++)
     {
-        cout << "Enter a Item: ";
+        cout << "Enter a item: ";
         cin >> lista[i];
+        queue.enqueue(lista[i]);
     }
-    for (int i = 0; i < nun; i++)
-    {
-        stack.push(lista[i]);
-    }
-    cout << "-=-=-=-=-=\n";
-    stack.printStack();
-    cout << "\n-=-=-=-=-=\n";
-    for (int i = 0; i < nun; i++)
-    {
-        cout << "pop: " << stack.pop() <<endl;
-        stack.printStack();
-        cout << "\n-=-=-=-=-=\n";
-    }
-    
-    cout << stack.pop();
-
+    queue.printQueue();
+    cout << queue.dequeue();
     return 0;
 };
