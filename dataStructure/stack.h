@@ -5,7 +5,6 @@ class Stack
 {
     private:
     NodeType* structure;
-    ItemType length;
     
     public:
     Stack();
