@@ -39,13 +39,11 @@ bool Queue::isFull() const{
 
 void Queue::printQueue() const{
     NodeType* locationTmp = front;
-    cout << "[";
     while (locationTmp != NULL)
     {
         cout << locationTmp->info << "; ";
         locationTmp = locationTmp->next;
     }
-    cout << "]" << endl;
 }
 
 void Queue::enqueue(ItemType item){
