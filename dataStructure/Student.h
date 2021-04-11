@@ -1,13 +1,12 @@
 #include<iostream>
-using std::string;
 
 class Student{
     private:
-    string name;
+    std::string name;
     int ra;
     public:
     Student();
-    Student(string name, int ra);
-    string getName() const;
+    Student(std::string name, int ra);
+    std::string getName() const;
     int getRa() const;
 };
