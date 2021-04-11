@@ -4,7 +4,7 @@ Student::Student(){
     name = "";
     ra = -1;
 };
-Student::Student(int ra, std::string name){
+Student::Student(std::string name, int ra){
     this->name = name;
     this->ra = ra;
 };
