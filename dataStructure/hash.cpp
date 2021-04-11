@@ -1,4 +1,3 @@
-#include "Student.h"
 #include "hash.h"
 using namespace std;
 
@@ -21,9 +20,9 @@ int Hash::getLength() const{
 }
 
 void Hash::printHash() const{
-    for (int i = 0; i < length; i++)
+    for (int i = 0; i < maxItem; i++)
     {
-        cout << i << " : " <<structure[i].getName() << " - "<< structure[i].getRa();
+        cout << i << " : " <<structure[i].getName() << " - "<< structure[i].getRa()<<endl;
     }
 }
 
