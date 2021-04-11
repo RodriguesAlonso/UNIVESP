@@ -1,8 +1,13 @@
 #include "Student.h"
 
-Student(string name = "", int ra = -1){
-    this->name
-}
+Student::Student(){
+    name = "";
+    ra = -1;
+};
+Student::Student(int ra, std::string name){
+    this->name = name;
+    this->ra = ra;
+};
 
 string Student::getName() const{
     return name;
