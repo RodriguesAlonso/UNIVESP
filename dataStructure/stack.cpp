@@ -53,7 +53,6 @@ void Stack::push(ItemType item){
         location->info = item;
         location->next = structure;
         structure = location;
-        length++;
     }else{
         throw "Stack is full.";
     }
@@ -68,7 +67,6 @@ ItemType Stack::pop(){
     ItemType item = structure->info;
     structure = structure->next;
     delete location;
-    length--;
     return item;
         
     }else{

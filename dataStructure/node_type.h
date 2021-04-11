@@ -1,7 +1,7 @@
 #ifndef NODETYPE_H
 #define NODETYPE_H
 
-typedef int ItemType;
+typedef char ItemType;
 
 struct NodeType
 {
