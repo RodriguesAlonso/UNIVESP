@@ -28,6 +28,24 @@ void Hash::printHash() const{
     }
 }
 
+void Hash::retriveItem(Student& student, bool& found){
+    int startLoc = getHash(student);
+    int location = startLoc;
+    bool moreSearch = true;
+    do
+    {
+        if (structure[location].getRa() == getHash(student) || structure[location].getRa() == -1)
+        {
+            moreSearch = false;
+        }else{
+            location = (location + 1) % maxItem;
+
+        }
+        
+    } while (structure[startLoc].getRa() != structure[location].getRa() || moreSearch);
+    
+}
+
 void Hash::insertItem(Student student){
     int location = getHash(student);
     while (structure[location].getRa() > 0)
@@ -37,3 +55,4 @@ void Hash::insertItem(Student student){
     structure[location] = student;
     length++;
 }
+
