@@ -1,8 +1,8 @@
 #include "Student.h"
 
 Student::Student(){
-    name = "";
-    ra = -1;
+    this->name = "";
+    this->ra = -1;
 };
 Student::Student(std::string name, int ra){
     this->name = name;

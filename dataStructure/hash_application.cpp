@@ -1,5 +1,6 @@
 #include <iostream>
 #include "hash.h"
+
 using namespace std;
 
 int main(){
@@ -9,7 +10,7 @@ int main(){
      49001, 52202, 65606,
      91234};
 
-    string nomes[7] = {
+    std::string nomes[7] = {
     "Pedro", "Raul", "Paulo",
     "Carlos", "Lucas", "Maria",
     "Samanta"}; 

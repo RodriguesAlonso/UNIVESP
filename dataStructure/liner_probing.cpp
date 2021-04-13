@@ -48,6 +48,15 @@ void Hash::retriveItem(Student& student, bool& found){
             structure[location] = student;
         }
 }
+void Hash::insertItem(Student student){
+    int location = getHash(student);
+    while (structure[location].getRa() > 0)
+    {
+        location = (location + 1) % maxItem;
+    }
+    structure[location] = student;
+    length++;
+}
 
 void Hash::deleteItem(Student student){
     int startLoc = getHash(student);
@@ -57,7 +66,6 @@ void Hash::deleteItem(Student student){
     {
         if (structure[location].getRa() == student.getRa() ||structure[location].getRa() == -1)
         {
-            structure[location] =
             moreSearch = false;
         }else{
             location = (location + 1) % maxItem;
@@ -70,13 +78,5 @@ void Hash::deleteItem(Student student){
     }
 }
 
-void Hash::insertItem(Student student){
-    int location = getHash(student);
-    while (structure[location].getRa() > 0)
-    {
-        location = (location + 1) % maxItem;
-    }
-    structure[location] = student;
-    length++;
-}
+
 
