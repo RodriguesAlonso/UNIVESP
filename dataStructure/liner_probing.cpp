@@ -39,11 +39,14 @@ void Hash::retriveItem(Student& student, bool& found){
             moreSearch = false;
         }else{
             location = (location + 1) % maxItem;
-
         }
-        
-    } while (structure[startLoc].getRa() != structure[location].getRa() || moreSearch);
+    } while (startLoc != location && moreSearch);
     
+    found = (structure[location].getRa() == student.getRa());
+        if (found)
+        {
+            structure[location] = student;
+        }
 }
 
 void Hash::insertItem(Student student){
