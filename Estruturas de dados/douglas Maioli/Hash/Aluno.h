@@ -4,11 +4,11 @@ using namespace std;
 class Aluno{
     private:
     int ra;
-    string nome;
+    std::string nome;
     
     public:
     Aluno();
-    Aluno(string nome, int ra);
+    Aluno(std::string nome, int ra);
     int getRa();
     string getNome();
 };
