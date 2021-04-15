@@ -69,7 +69,8 @@ void Hash::retriveHash(Aluno& aluno, bool& found){
         if (structure[location].getRa() == aluno.getRa())
         {
             found = true;
-            aluno = aux;
+            aluno = structure[location];
+            break;
         }
         location = (location + 1) % max_item;
     }
