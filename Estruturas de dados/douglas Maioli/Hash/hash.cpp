@@ -26,28 +26,48 @@ void Hash::print(){
 
 void Hash::insertHash(Aluno aluno){
     int location = getHash(aluno);
+    while (structure[location].getRa() > 0)
+    {
+        location = (location + 1) % max_item;
+    }
     structure[location] = aluno;
     length++;
     }
 
 void Hash::deleteAluno(Aluno aluno){
     int location = getHash(aluno);
-    structure[location] = Aluno();
-    cout <<endl <<"delete: " << aluno.getNome();
-    length--;
-    
+    bool test = false;
+    while (structure[location].getRa() != -1)
+    {
+        if (structure[location].getRa() == aluno.getRa())
+        {
+            test = true;
+            structure[location] = Aluno("", -2);
+            cout <<endl <<"delete: " << aluno.getNome();
+            length--;
+            break;
+        }
+        location = (location +1) % max_item;
+    }
+    if (!test)
+    {
+        cout << "\nNenhum aluno foi encontrado" << endl;
+    }
 }
 
 void Hash::retriveHash(Aluno& aluno, bool& found){
     int location = getHash(aluno);
+    found = false;
     Aluno aux = structure[location];
-    if (structure[location].getRa() != aluno.getRa())
+    while (structure[location].getRa() != -1)
     {
-        found = false;        
+        location = (location + 1) % max_item;
+        if (structure[location].getRa() == aluno.getRa())
+        {
+            found = true;
+            aluno = aux;
+            found = false;        
+        }
     }
-    else{
-        found = true;
-        aluno = aux;
-    }
-
+    found = false;        
 }
