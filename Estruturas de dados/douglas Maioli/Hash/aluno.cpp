@@ -3,9 +3,9 @@
 
 Aluno::Aluno(){
     ra = -1;
-    nome = "VAZIO";
+    nome = "";
 }
-Aluno::Aluno(string nome, int ra){
+Aluno::Aluno(std::string nome, int ra){
     this->nome = nome;
     this->ra = ra;
 }
