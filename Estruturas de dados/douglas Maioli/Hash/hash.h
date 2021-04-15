@@ -13,9 +13,9 @@ class Hash{
     ~Hash();
     int getLenght();
     void print();
-    void retriveHash(Aluno aluno);
+    void retriveHash(Aluno& aluno, bool& found);
     void insertHash(Aluno aluno);
-    void deleteHash(Aluno aluno);
+    void deleteAluno(Aluno aluno);
 
 
 };
