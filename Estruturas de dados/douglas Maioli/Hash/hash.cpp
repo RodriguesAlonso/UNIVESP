@@ -4,7 +4,8 @@ using namespace std;
 
 Hash::Hash(int max){
     max_item = max;
-    Aluno* structure[max_item];
+    structure = new Aluno[max_item];
+    length = 0;
 }
 Hash::~Hash(){
     delete []structure;
@@ -25,12 +26,16 @@ void Hash::print(){
 }
 
 void Hash::insertHash(Aluno aluno){
-    int location = getHash(aluno);
+    int location;
+    location = getHash(aluno);
+    cout << endl << location <<"-=-=-=\n";
     while (structure[location].getRa() > 0)
     {
+        cout << endl << location <<"-=-=-=\n";
         location = (location + 1) % max_item;
     }
     structure[location] = aluno;
+    cout << endl << structure[location].getNome() <<" : " << location <<"-=-=-=\n";
     length++;
     }
 
@@ -56,18 +61,17 @@ void Hash::deleteAluno(Aluno aluno){
 }
 
 void Hash::retriveHash(Aluno& aluno, bool& found){
-    int location = getHash(aluno);
     found = false;
+    int location = getHash(aluno);
     Aluno aux = structure[location];
     while (structure[location].getRa() != -1)
     {
-        location = (location + 1) % max_item;
         if (structure[location].getRa() == aluno.getRa())
         {
             found = true;
             aluno = aux;
-            found = false;        
         }
+        location = (location + 1) % max_item;
     }
-    found = false;        
+           
 }
