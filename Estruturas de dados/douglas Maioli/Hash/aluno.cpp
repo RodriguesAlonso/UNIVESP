@@ -3,7 +3,7 @@
 
 Aluno::Aluno(){
     ra = -1;
-    nome = "";
+    nome = "VAZIO";
 }
 Aluno::Aluno(string nome, int ra){
     this->nome = nome;

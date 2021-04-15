@@ -3,9 +3,9 @@
 
 class Hash{
     private:
-    Aluno* structure;
     int length;
     int max_item;
+    Aluno* structure = new Aluno[max_item];
     int getHash(Aluno aluno);
 
     public:
