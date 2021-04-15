@@ -1,15 +1,14 @@
-#include <iostream>
 #include "Aluno.h"
 
 class Hash{
     private:
     int length;
     int max_item;
-    Aluno* structure = new Aluno[max_item];
+    Aluno* structure;
     int getHash(Aluno aluno);
 
     public:
-    Hash(int max);
+    Hash(int max_item = 100);
     ~Hash();
     int getLenght();
     void print();
