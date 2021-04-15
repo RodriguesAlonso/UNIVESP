@@ -11,11 +11,11 @@ class Hash{
     public:
     Hash(int max);
     ~Hash();
-    void getLenght();
+    int getLenght();
     void print();
-    void retriveHash();
-    void insertHash();
-    void deleteHash();
+    void retriveHash(Aluno aluno);
+    void insertHash(Aluno aluno);
+    void deleteHash(Aluno aluno);
 
 
 };
