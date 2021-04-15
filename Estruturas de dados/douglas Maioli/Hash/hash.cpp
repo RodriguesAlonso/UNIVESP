@@ -34,5 +34,5 @@ void Hash::insertHash(Aluno aluno){
     }
 void Hash::deleteHash(Aluno aluno){
     int location = getHash(aluno);
-    
+    structure[location] = Aluno();
 }
