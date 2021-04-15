@@ -25,14 +25,29 @@ void Hash::print(){
 }
 
 void Hash::insertHash(Aluno aluno){
-    cout <<"teste0";
     int location = getHash(aluno);
-    cout <<"teste1";
     structure[location] = aluno;
-    cout <<"teste3";
     length++;
     }
-void Hash::deleteHash(Aluno aluno){
+
+void Hash::deleteAluno(Aluno aluno){
     int location = getHash(aluno);
     structure[location] = Aluno();
+    cout <<endl <<"delete: " << aluno.getNome();
+    length--;
+    
+}
+
+void Hash::retriveHash(Aluno& aluno, bool& found){
+    int location = getHash(aluno);
+    Aluno aux = structure[location];
+    if (structure[location].getRa() != aluno.getRa())
+    {
+        found = false;        
+    }
+    else{
+        found = true;
+        aluno = aux;
+    }
+
 }
