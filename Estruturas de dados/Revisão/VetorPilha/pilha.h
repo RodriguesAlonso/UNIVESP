@@ -10,6 +10,9 @@ class Stack{
     public:
     Stack();
     ~Stack();
+    bool isFull();
+    bool isEmpty();
+
     int getLength();
     ItemType getTop();
     void push(ItemType item);
