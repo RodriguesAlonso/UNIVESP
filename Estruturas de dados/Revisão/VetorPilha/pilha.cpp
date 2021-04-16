@@ -15,5 +15,7 @@ int Stack::getLength(){
     return length;
 }
 
-bool 
+bool isFull(){
+    return (length == MAX_ITEM);
+}
 
