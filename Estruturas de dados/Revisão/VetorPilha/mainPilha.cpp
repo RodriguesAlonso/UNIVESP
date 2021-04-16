@@ -4,25 +4,24 @@
 using namespace std;
 
 int main(){
-    Stack pilha;
-    ItemType caracter;
-    cout << "Digite uma string:";
-    cin.get(caracter);
+    Stack stack;
+    ItemType character;
+    ItemType stackItem;
 
-    do
+    cout<<"Digite um string: ";
+    cin.get(character);
+    while (character != '\n')
     {
-        pilha.push(caracter);
-        cin.get(caracter);
-    } while (caracter != '\n');
-    pilha.print();
-    cout<<"teste01";
-    for (int i = 0; i < pilha.getLength(); i++)
-    {
-        cout<< i << "; ";
-        cout << pilha.pop() << " ";
+        stack.push(character);
+        cin.get(character);
     }
-    
-    cout << endl << "FIM";
-    pilha.print();
+    stack.print();
+    while (!stack.isEmpty())
+    {
+        stackItem = stack.pop();
+        cout << stackItem;
+    }
+    cout <<"\nFIM\n";
+    stack.print();
     return 0;
 }

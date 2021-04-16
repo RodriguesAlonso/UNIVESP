@@ -28,18 +28,19 @@ ItemType Stack::getTop(){
 }
 
 void Stack::print(){
+    cout << "PILHA = ";
     for (int i = 0; i < length; i++)
     {
-        cout<< i << ":"<< structure[i];
+        cout<< structure[i];
     }
-    
+    cout << endl;
 }
 
 void Stack::push(ItemType item){
 
     if (!isFull())
     {
-        structure[length + 1] = item;
+        structure[length] = item;
         length++;
     }else{
         throw "stack is full.";
@@ -48,7 +49,7 @@ void Stack::push(ItemType item){
 ItemType Stack::pop(){
     if (!isEmpty())
     {
-        ItemType temp = structure[length];
+        ItemType temp = structure[length - 1];
         length--;
         return temp;
     }else{
