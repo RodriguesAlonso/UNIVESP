@@ -5,7 +5,7 @@ const int MAX_ITEM = 100;
 class Stack{
     private:
     int length;
-    ItemType* estructure;
+    ItemType* structure;
     ItemType top;
     public:
     Stack();
