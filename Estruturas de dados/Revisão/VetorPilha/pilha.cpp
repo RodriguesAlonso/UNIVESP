@@ -30,7 +30,7 @@ ItemType Stack::getTop(){
 void Stack::print(){
     for (int i = 0; i < length; i++)
     {
-        cout << i << ": " << structure[i];
+        cout<< i << ":"<< structure[i];
     }
     
 }
@@ -48,10 +48,10 @@ void Stack::push(ItemType item){
 ItemType Stack::pop(){
     if (!isEmpty())
     {
-    ItemType temp = structure[length];
-    length--;
-    return temp;
+        ItemType temp = structure[length];
+        length--;
+        return temp;
     }else{
-        throw "Stack is empty."
+        throw "Stack is empty.";
     }
 }
