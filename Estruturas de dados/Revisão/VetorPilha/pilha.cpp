@@ -15,3 +15,5 @@ int Stack::getLength(){
     return length;
 }
 
+bool 
+
