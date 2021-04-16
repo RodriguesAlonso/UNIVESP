@@ -15,7 +15,23 @@ int Stack::getLength(){
     return length;
 }
 
-bool isFull(){
+bool Stack::isFull(){
     return (length == MAX_ITEM);
 }
 
+bool Stack::isEmpty(){
+    return(length == 0);
+}
+
+void Stack::print(){
+    for (int i = 0; i < length; i++)
+    {
+        cout << i << ": " << structure[i] << endl;
+    }
+    
+}
+
+void Stack::push(ItemType item{
+    structure[length + 1] = item;
+    
+}
