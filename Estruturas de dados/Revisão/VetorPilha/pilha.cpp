@@ -1,4 +1,4 @@
-#include "pilha.h";
+#include "pilha.h"
 #include <iostream>
 
 using namespace std;
