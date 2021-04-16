@@ -6,7 +6,6 @@ class Stack{
     private:
     int length;
     ItemType* structure;
-    ItemType top;
     public:
     Stack();
     ~Stack();

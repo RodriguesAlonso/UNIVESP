@@ -23,6 +23,10 @@ bool Stack::isEmpty(){
     return(length == 0);
 }
 
+ItemType Stack::getTop(){
+    return structure[length];
+}
+
 void Stack::print(){
     for (int i = 0; i < length; i++)
     {
@@ -31,7 +35,7 @@ void Stack::print(){
     
 }
 
-void Stack::push(ItemType item{
+void Stack::push(ItemType item){
     structure[length + 1] = item;
-    
+    length++;
 }
