@@ -39,3 +39,8 @@ void Stack::push(ItemType item){
     structure[length + 1] = item;
     length++;
 }
+ItemType Stack::pop(){
+    ItemType temp = structure[length];
+    length--;
+    return temp;
+}
