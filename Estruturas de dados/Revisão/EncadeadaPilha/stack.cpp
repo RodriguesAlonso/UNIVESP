@@ -19,19 +19,17 @@ Stack::~Stack()
     }    
 }
 bool Stack::isFull(){
+    nodeType* newStructure;
     try
     {
-        nodeType* newStructure;
         newStructure = new nodeType;
         delete newStructure;
         return false;
     }
-    catch(bad_alloc exception)
+    catch(std::bad_alloc exception)
     {
         return true;
     }
-    
-        
 }
     bool Stack::isEmpty(){
         return structure == NULL;        
@@ -39,7 +37,8 @@ bool Stack::isFull(){
 void Stack::push(itemType item){
     if (!isFull())
     {
-        nodeType* location = new nodeType;
+        nodeType* location;
+        location = new nodeType;
         location->info = item;
         location->next = structure;
         structure = location;
@@ -58,7 +57,7 @@ itemType Stack::pop(){
         throw "Stack is empty.";
     }
 void Stack::print(){
-     cout << "Stack: ";
+     cout << "Stack: \n";
      int i = 0;
      nodeType* tempPtr = structure;
      while (tempPtr != NULL)
