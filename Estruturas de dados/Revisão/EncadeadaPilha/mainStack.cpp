@@ -4,14 +4,27 @@
 using namespace std;
 
 int main(){
-
+    itemType character;
+    character = '9';
     Stack pilha;
-    cout << "\nPilha ok\n";
-    pilha.push(10);
-    pilha.push(5);
-    pilha.push(3);
+    pilha.push('1');
+    pilha.push('4');
+    pilha.push('2');
+    pilha.push('9');
     cout << "\nPush ok\n";
     pilha.print();
-
+    
+    itemType x;
+     x = pilha.pop();
+    cout << x;
+    pilha.print();
+     x = pilha.pop();
+    cout << x;
+    pilha.print();
+     x = pilha.pop();
+    cout << x;
+    pilha.print();
+    
+    cout <<"\nFIM\n";
     return 0;
 }
