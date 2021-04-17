@@ -60,10 +60,11 @@ itemType Stack::pop(){
 void Stack::print(){
      cout << "Stack: ";
      int i = 0;
-     while (structure != NULL)
+     nodeType* tempPtr = structure;
+     while (tempPtr != NULL)
      {
-         cout << i << ": " << structure->info<<endl;
-         structure = structure->next;
+         cout << i << ": " << tempPtr->info<<endl;
+         tempPtr = tempPtr->next;
          i++;
      }     
     }
