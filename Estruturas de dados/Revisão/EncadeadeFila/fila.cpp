@@ -37,12 +37,12 @@ bool Queue::isEmpty(){
 }
 void Queue::enqueue(itemType item){
     if (!isfull())
-    {
+    {   
         nodeType* newNode;
         newNode = new nodeType;
         newNode->info = item;
         newNode->next = NULL;
-        if (rear = NULL)
+        if (rear == NULL)
         {
             front = newNode;
         }else{
@@ -55,20 +55,20 @@ void Queue::enqueue(itemType item){
 
 }
 itemType Queue::deque(){
-    if (!isEmpty)
+    if (!isEmpty())
     {
         itemType item = front->info;
         nodeType* tempPtr = front;
         front = front->next;
         if (front == NULL)
+        {
             rear = NULL;
+        }
         delete tempPtr;
         return item;
-    }else
+    }else{
         throw "Queue is empty.";
-    
-    
-
+    }
 }
 void Queue::print(){
     nodeType* tempPtr = front;
