@@ -33,14 +33,50 @@ bool Queue::isfull(){
     
 }
 bool Queue::isEmpty(){
-    
+    return(front == NULL);
 }
-void Queue::enqueue(){
+void Queue::enqueue(itemType item){
+    if (!isfull())
+    {
+        nodeType* newNode;
+        newNode = new nodeType;
+        newNode->info = item;
+        newNode->next = NULL;
+        if (rear = NULL)
+        {
+            front = newNode;
+        }else{
+            rear->next = newNode;
+        }
+        rear = newNode;
+    }else
+        throw "Queue is Full";
+    
 
 }
 itemType Queue::deque(){
+    if (!isEmpty)
+    {
+        itemType item = front->info;
+        nodeType* tempPtr = front;
+        front = front->next;
+        if (front == NULL)
+            rear = NULL;
+        delete tempPtr;
+        return item;
+    }else
+        throw "Queue is empty.";
+    
+    
 
 }
 void Queue::print(){
-
+    nodeType* tempPtr = front;
+    cout << "Queue: \n";
+    while (tempPtr != NULL)
+    {
+        cout << front->info << "; ";
+        front = front->next;
+    }
+    cout << endl;
 }
