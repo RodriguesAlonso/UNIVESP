@@ -18,8 +18,8 @@ class Queue{
     void enqueue();
     itemType deque();
     void print();
-    private:
     
+    private:
 
 
 
