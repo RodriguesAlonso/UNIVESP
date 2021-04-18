@@ -14,8 +14,17 @@ int main(){
     fila.enqueue(94);
     cout <<"ENQUEUE"<< endl;
     fila.print();
-    fila.deque();
-    cout <<"DENQUEUE"<< endl;
+    cout <<"DENQUEUE";
+    cout<< "deque = "  << fila.deque() << endl;
     fila.print();
+    cout<< "deque = "  << fila.deque() << endl;
+    fila.print();
+    cout<< "deque = "  << fila.deque() << endl;
+    fila.print();
+    cout<< "deque = "  << fila.deque() << endl;
+    fila.print();
+    cout<< "deque = "  << fila.deque() << endl;
+    fila.print();
+    
     return 0;
 }
