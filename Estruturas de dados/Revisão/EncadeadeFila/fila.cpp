@@ -16,12 +16,24 @@ Queue::~Queue(){
         front = front->next;
         delete location;
     }
+    rear = NULL;
 }
 bool Queue::isfull(){
-
+    try
+    {
+        nodeType* temp;
+        temp = new nodeType;
+        delete temp;
+        return false;
+    }
+    catch(bad_alloc exception)
+    {
+        throw "Queue is already full";
+    }
+    
 }
 bool Queue::isEmpty(){
-
+    
 }
 void Queue::enqueue(){
 
