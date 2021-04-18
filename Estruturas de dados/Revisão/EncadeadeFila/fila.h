@@ -13,7 +13,7 @@ class Queue{
     ~Queue();
     bool isfull();
     bool isEmpty();
-    void enqueue();
+    void enqueue(itemType);
     itemType deque();
     void print();
     private:
