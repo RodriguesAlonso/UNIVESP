@@ -57,8 +57,9 @@ void Queue::enqueue(itemType item){
 itemType Queue::deque(){
     if (!isEmpty())
     {
+        nodeType* tempPtr;
+        tempPtr = front;
         itemType item = front->info;
-        nodeType* tempPtr = front;
         front = front->next;
         if (front == NULL)
         {
@@ -75,8 +76,8 @@ void Queue::print(){
     cout << "Queue: \n";
     while (tempPtr != NULL)
     {
-        cout << front->info << "; ";
-        front = front->next;
+        cout << tempPtr->info << "; ";
+        tempPtr = tempPtr->next;
     }
     cout << endl;
 }
