@@ -29,4 +29,7 @@ public class Account
     {
         return name;
     }
+    public void printAccount(){
+        System.out.printf("%s balance: $%.2f %n", this.name, this.balance);
+    }
 }
