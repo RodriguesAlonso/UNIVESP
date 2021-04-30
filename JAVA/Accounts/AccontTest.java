@@ -6,10 +6,13 @@ public class AccontTest
 {
     public static void main(String[] args) 
     {
-        String name = JOptionPane.showInputDialog("What is your name?");
-        Account account1 = new Account(name, 50.00);
-        String name2 = JOptionPane.showInputDialog("What is your name?");
-        Account account2 = new Account(name2, -7.5);
+        //String name = JOptionPane.showInputDialog("What is your name?");
+        //String balance = JOptionPane.showInputDialog(String.format("Welcome %s %n how much are your balance:", name));
+        //Account account1 = new Account(name, Double.parseDouble(balance));
+
+        name = JOptionPane.showInputDialog("What is your name?");
+        balance = JOptionPane.showInputDialog(String.format("Welcome %s %n How much is yout balance", name));
+        Account account2 = new Account(name, Double.parseDouble(balance));
         
         //System.out.printf("%n%s balance: $%.2f", account1.getName(), account1.getBalance());
         //System.out.printf("%n%s balance: $%.2f %n", account2.getName(), account2.getBalance());
