@@ -1,3 +1,5 @@
+import javax.swing.JOptionPane;
+
 public class Account 
 {
     // Váriavel de instância.
@@ -30,6 +32,7 @@ public class Account
         return name;
     }
     public void printAccount(){
-        System.out.printf("%s balance: $%.2f %n", this.name, this.balance);
+        String menssage = String.format("%s balance: $%.2f %n", this.name, this.balance);
+        JOptionPane.showMessageDialog(null, menssage);
     }
 }
