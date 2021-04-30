@@ -1,11 +1,15 @@
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 public class AccontTest 
 {
     public static void main(String[] args) 
     {
-        Account account1 = new Account("Jane Green", 50.00);
-        Account account2 = new Account("John Blue", -7.5);
+        String name = JOptionPane.showInputDialog("What is your name?");
+        Account account1 = new Account(name, 50.00);
+        String name2 = JOptionPane.showInputDialog("What is your name?");
+        Account account2 = new Account(name2, -7.5);
         
         //System.out.printf("%n%s balance: $%.2f", account1.getName(), account1.getBalance());
         //System.out.printf("%n%s balance: $%.2f %n", account2.getName(), account2.getBalance());
