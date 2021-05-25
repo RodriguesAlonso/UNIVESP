@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
+        "src/ClasseGenerica",
         "src/Accounts",
-        "src/ClasseGenerica"
+        "src/Colletions"
     ]
 }
