@@ -4,7 +4,8 @@ import java.util.Collection;
 import java.util.Iterator;
 
 public class ColletionTest {
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         String colors[] = {"MAGENTA", "RED", "WHITE", "BLUE", "CYAN"};
         List<String> list = new ArrayList<String>();
         for (String color : colors)
@@ -15,11 +16,19 @@ public class ColletionTest {
         for (String color : removeColors)
             removeList.add(color);
 
-        System.out.println("Array list");
+        System.out.println("Array list:");
         for (int i = 0; i < list.size(); i++)
             System.out.printf("%s ", list.get(i));
-        
-        private static void removeColors2(Collection<String> collection1, Collection<String> collection2)
+            
+        removeColors(list, removeList);
+
+        System.out.println("\nArray list after calling removeColors:");
+        for (int i = 0; i < list.size(); i++)
+            System.out.printf("%s ", list.get(i));
+    }
+
+
+        private static void removeColors(Collection<String> collection1, Collection<String> collection2)
         {
             Iterator<String> iterator = collection1.iterator();
             while (iterator.hasNext()){
