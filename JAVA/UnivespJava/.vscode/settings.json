@@ -1,7 +1,7 @@
 {
     "java.project.sourcePaths": [
-        "src/ClasseGenerica",
+        "src/Colletions",
         "src/Accounts",
-        "src/Colletions"
+        "src/ClaMetGenericos"
     ]
 }
