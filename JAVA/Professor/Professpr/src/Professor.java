@@ -21,7 +21,8 @@ public abstract class Professor {
         this.salario = salario;
     }
 
-    public void calcSalario(){
-        
+    public double calcSalario(){
+        return this.getSalario();
+
     }
 }
