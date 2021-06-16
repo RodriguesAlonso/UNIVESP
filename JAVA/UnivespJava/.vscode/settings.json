@@ -3,5 +3,6 @@
         "src/Colletions",
         "src/Accounts",
         "src/ClaMetGenericos"
-    ]
+    ],
+    "snippets.useWorkspaceFolder": true
 }
