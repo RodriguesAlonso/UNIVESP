@@ -1,5 +1,6 @@
 import java.util.LinkedList;
 import java.util.List;
+import java.util.ListIterator;
 
 public class ListTest {
     public static void main(String[] args) {
@@ -26,16 +27,49 @@ public class ListTest {
         //libera recursos
         list2 = null;
         System.out.printf("%nlist2 %s", list2);
-        //vonverte em string de letras maiúscilas.
+        //converte em string de letras maiúscilas.
+        convertToUpperCaseString(list1);
         //imprime elementos list1.
-
+        printList(list1);
         //remove itens 4 a 6.
+        removeItems(list1, 4, 7);
         //imprime list1.
+        printList(list1);
         //imprime list1 na ordem inversa.
+        printReversedList(list1);
         
     }
     //gera saída do conteúdo da List.
+    private static void printList(List<String> list)
+    {
+        System.out.printf("%nlist:%n");
+        for(String string : list)
+            System.out.printf("%s ", string);
+        System.out.println();
+
+    }
     //Localiza objetos String e converte em letras maiúsculas.
+    private static void convertToUpperCaseString(List<String> list)
+    {
+        ListIterator<String> iterator = list.listIterator();
+        while(iterator.hasNext())
+        {
+            String color = iterator.next();
+            iterator.set(color.toUpperCase());
+        }
+    }
     //Obtém sublista e utiliza método clear para excluir itens da sublista.
-    //impre lista invertida.
+    private static void removeItems(List<String> list, int start, int end)
+    {
+        list.subList(start, end).clear();
+    }
+    //imprime lista invertida.
+    private static void printReversedList(List<String> list){
+        ListIterator<String> iterator = list.listIterator(list.size());
+        System.out.printf("Reversed List:%n ");
+        while(iterator.hasPrevious())
+        {
+            System.out.printf("%s ", iterator.previous());
+        }
+    }
 }
