@@ -2,5 +2,7 @@
     "java.project.sourcePaths": [
         "JAVA/Professor/Professpr/src",
         "JAVA/UnivespJava/src/ClaMetGenericos"
-    ]
+    ],
+    "editor.fontSize": 17,
+    "editor.fontWeight": null
 }
