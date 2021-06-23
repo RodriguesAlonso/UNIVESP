@@ -1,23 +1,12 @@
 from math import sqrt;
-#n = 10
-#s2 = 3.4
-#mi = 10
-#media = 6.2
-#tcalc = (media - mi)/  sqrt(s2)/sqrt(n)
-#print(tcalc)
+def calcPropor(pi, n, f):
+    p = f / n
+    calcProp = (p - pi) / sqrt(pi * (1 - pi) / n)
+    return print(calcProp)
 
-#pi = 0.8
-#n = 3000
-#p = 0.93
-#zcalc = p-pi/pi*(1-pi)/sqrt(n)
-#print(zcalc)
-
-s2 = [10, 10 ,10 ,10 ,10 ,10 ,10 ,10 ,10 ,10 ,10, 4, 3, 3, 1, 0, 0,0,0,0,0]
-x = 0
-for s in s2:
-    soma = (s2[s] - 5.55)**2 / 20
-    x += soma 
-
-dp = sqrt(x)
-res = (5.55 - 5)/dp/sqrt(20)
-print (res)
+def calcMedia(mediaPopulacao, mediaAmostra, sigma, n):
+    calcMed = ((mediaAmostra - mediaPopulacao) / (sigma / sqrt(n)))
+    return print(calcMed)
+dp = sqrt(3.4)
+print(dp)
+calcMedia(10, 6.2, 1.84, 10)
