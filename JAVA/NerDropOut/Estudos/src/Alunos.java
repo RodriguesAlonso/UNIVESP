@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Alunos {
@@ -27,6 +28,9 @@ public class Alunos {
         System.out.printf("João é aluno ? %b", tem);
         System.out.println("-=-=Elementos Dublicados-=-=-=");
         alunos.add("Paulo");
+        System.out.println(alunos);
+        System.out.println("-=-=-Collections.sort=-=-=");
+        Collections.sort(alunos);
         System.out.println(alunos);
 
     }
