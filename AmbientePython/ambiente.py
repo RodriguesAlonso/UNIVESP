@@ -8,21 +8,26 @@ def calcMedia(mediaPopulacao, mediaAmostra, sigma, n):
     calcMed = ((mediaAmostra - mediaPopulacao) / (sigma / sqrt(n)))
     return print(calcMed)
     
-def intersecsão(a, b):
+#PROBABILISASW DEFs    
+def intersecsãoTeoremaProdutoEventosIndependentes(a, b):
     res = a*b
-    print (res)
+    return res
+def teoremaProduto(a, b):
+    res = probabilidadeCondicional(a, b) * b
+    return res
 
-def unicao(a, b):
-    return print(a + b)
-
-def somaDeProbabilidades(a,b):
+def somaUnicaoEventosExclusivos(a, b):#Se acontece um não acontece o outro
+    res = a + b
+    return res
+def somaDeProbabilidadesDoisEventos(a,b):
     res = a+b - (a * b)
-    print (res)
+    return res
 
-#unicao(4/36, 5/36)
-#intersecsão(4/6, 5/6)
-#somaDeProbabilidades(4/36, 6/36)
+def eventoComplementar(a):
+    res = 1 - a
+    return res
+def probabilidadeCondicional(a, b): #A condiconal B
+    res = (a + b) / b
+    return res
 
-
-#calcMedia(10, 6.2, 1.84, 10)
-#calcPropor
+print(somaDeProbabilidadesDoisEventos(1/4, 1/12))
