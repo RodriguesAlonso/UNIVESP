@@ -1,23 +1,33 @@
 from math import sqrt;
-#n = 10
-#s2 = 3.4
-#mi = 10
-#media = 6.2
-#tcalc = (media - mi)/  sqrt(s2)/sqrt(n)
-#print(tcalc)
+def calcPropor(pi, n, f):
+    p = f / n
+    calcProp = (p - pi) / sqrt(pi * (1 - pi) / n)
+    return print(calcProp)
 
-#pi = 0.8
-#n = 3000
-#p = 0.93
-#zcalc = p-pi/pi*(1-pi)/sqrt(n)
-#print(zcalc)
+def calcMedia(mediaPopulacao, mediaAmostra, sigma, n):
+    calcMed = ((mediaAmostra - mediaPopulacao) / (sigma / sqrt(n)))
+    return print(calcMed)
+    
+#PROBABILISASW DEFs    
+def intersecsãoTeoremaProdutoEventosIndependentes(a, b):
+    res = a*b
+    return res
+def teoremaProduto(a, b):
+    res = probabilidadeCondicional(a, b) * b
+    return res
 
-s2 = [10, 10 ,10 ,10 ,10 ,10 ,10 ,10 ,10 ,10 ,10, 4, 3, 3, 1, 0, 0,0,0,0,0]
-x = 0
-for s in s2:
-    soma = (s2[s] - 5.55)**2 / 20
-    x += soma 
+def somaUnicaoEventosExclusivos(a, b):#Se acontece um não acontece o outro
+    res = a + b
+    return res
+def somaDeProbabilidadesDoisEventos(a,b):
+    res = a+b - (a * b)
+    return res
 
-dp = sqrt(x)
-res = (5.55 - 5)/dp/sqrt(20)
-print (res)
+def eventoComplementar(a):
+    res = 1 - a
+    return res
+def probabilidadeCondicional(a, b): #A condiconal B
+    res = (a + b) / b
+    return res
+
+print(somaDeProbabilidadesDoisEventos(1/4, 1/12))
