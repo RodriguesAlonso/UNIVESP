@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo elementos</title>
+    <style>
+        body{
+            font-family: helvetica, sans-serif;
+
+        }
+        a{
+            color: rgb(50, 205, 84);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:visited{
+            color: blueviolet;
+        }
+        a:hover{
+            color: rgb(97, 97, 245);
+            text-decoration: underline;
+        }
+        a:active{
+            color: aquamarine;
+        }
+        .especial{
+            background-color: rgb(233, 205, 255);
+        }
+        .especial::before{
+            content: "<=";
+        }
+        .especial::after{
+            content: '=>';
+        }
+    </style>
+</head>
+<body>
+    <h1>Pesonalizando Links</h1>
+    <ul>
+        <li><a class="especial" href="google.com" rel="external" target="_blank">google</a></li>
+        <li><a href="youtuve.com" rel="external" target="_blank">youtube</a></li>
+        <li><a href="https://www.cursoemvideo.com" rel="external" target="_blank">curso</a></li>
+    </ul>
+</body>
+</html>
