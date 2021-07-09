@@ -1,10 +1,11 @@
 {
     "java.project.sourcePaths": [
+        "src/Exemplo1",
         "src/Colletions",
         "src/Collections",
         "src/ClaMetGenericos",
         "src/Accounts",
-        "src/Exemplo1"
+        "src"
     ],
     "snippets.useWorkspaceFolder": true
 }
