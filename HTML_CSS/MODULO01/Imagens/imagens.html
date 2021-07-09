@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=P\, initial-scale=1.0">
+    <title>Midias</title>
+</head>
+<body>
+    <p><a href="../index.html" rel="pre">Primeiro Ambiente</a></p>
+    <h1>Midias</h1>
+    <img src="../img/wizard03.png" alt="">
+    <img src="../img/wizard01.png" alt="">
+    <img src="../img/wizard02.png" alt="">
+
+    <h3>Downloads</h3>
+    <p>
+        <a href="../img/wizard01.png" download="wizard01.png" type="application/png">wizard01</a><br>
+        <a href="../img/wizard02.png" download="">wizard02</a><br>
+        <a href="../img/wizard03.png">wizard03</a>
+    </p>
+    <h3>Imagem flexivel</h3>
+    <picture>
+        <source media="(max-width: 750px)" srcset="pequena.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="media.png" type="image/png">
+        <img src="grande.png" alt="imagem flexivel">
+    </picture>
+    <h3>Audios</h3>
+    <audio preload="metadata" controls loop>
+        <source src="../midias/Sonic Pogo - Vans in Japan.mp3" type="audio/mpeg">
+    </audio>
+    <h3>Videos hospedados no site</h3>
+    <video controls width="560" poster="../midias/posterFogo.jpg">
+        <source src="../midias/fogo.mkv" type="video/mkv">
+        <source src="../midias/fogo.webm" type="video/webm">
+        <source src="../midias/fogo.mp4" type="video/mp4">
+    </video>
+    <h3>Videos hospedado no youtube</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Jz5Yxai6bu4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</body>
+</html>
