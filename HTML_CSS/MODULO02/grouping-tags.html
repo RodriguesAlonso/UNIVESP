@@ -13,7 +13,7 @@
         }
         header{
             margin: 30px;
-            
+            border-radius: 15px;
             padding: 10px;
             background-color: rgb(255, 232, 127);
         }
@@ -21,29 +21,41 @@
             margin: 0px;
             background-color: brown;
             text-align: center;
-            padding: 3px;
+            padding: 4px;
             color: bisque;
+            border-radius: 15px;
             
+        }
+        footer > p{
+            margin: 0px;
         }
         article{
             background-color: beige;
             padding: 10px;
         }
         section{
+            border-radius: 15px;
             margin: 15px;
             background-color: rgb(255, 126, 79);
             padding: 10px;
         }
+        article > aside > p{
+            margin: 0px;
+        }
         article > aside{
             background-color: bisque;
-            padding: 1px;
+            padding: 3px;
+            border-radius: 10px;
 
         }
         nav{
             background-color: rgb(160, 94, 94);
-            padding: 1px;
+            padding: 3px;
+            box-shadow: 2px 3px 5px 1px rgba(158, 156, 32, 0.87);
+            border-radius: 10px;
         }
         nav > a{
+            padding: 3px;
             text-decoration: none;
             color: antiquewhite;
             font-weight: bold;
@@ -52,11 +64,19 @@
             text-decoration: underline;
             color: burlywood;
         }
+        div#bola{
+            width: 40px;
+            height: 40px;
+            margin: 10px;
+            background-color: antiquewhite;
+            border-radius: 50%;
+            
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Meu Site</h1>
+        <h1><div id="bola"></div> Meu Site</h1>
         <nav>
             <a href="#">link</a>
             <a href="#">link</a>
@@ -65,12 +85,12 @@
     </header>
     <main>
         <section>
-            <h2>Título</h2>
+            <h2><div id="bola"></div>Título</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ut sed, esse, tenetur nam corporis hic veniam distinctio odit dolore nesciunt sapiente quod molestias. Doloribus debitis natus laboriosam consectetur deserunt.</p>
         </section>
         <section>
             <article>
-                <h2>titulo article</h2>
+                <h2><div id="bola"></div>titulo article</h2>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus error consectetur totam. Eligendi veritatis incidunt exercitationem, non officiis in odio, neque ratione explicabo voluptates, tempore laudantium reiciendis harum. Fugit, dolorum.</p>
                 <aside>
                     <p>Artigo do JP</p>
@@ -82,7 +102,7 @@
         </section>
     </main>
     <footer>
-        feito por jp.
+        <p>feito por jp.</p>
     </footer>
 </body>
 </html>
