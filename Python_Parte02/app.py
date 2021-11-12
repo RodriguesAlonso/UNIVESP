@@ -10,9 +10,6 @@ def criamatriz(num_linhas, num_colunas, valor):
 def imprimi_matriz(matriz):
     for i in range(len(matriz)):        
         print(matriz[i])
-            
-#matriznova = criamatriz(2,4,6)
-#imprimi_matriz(matriznova)
 
 def criamatriz02(linhas, colunas):
     matriz = []
@@ -30,5 +27,25 @@ def le_matriz():
     matriz = criamatriz02(linhas, colunas)
     imprimi_matriz(matriz)
 
-le_matriz()
 
+def listaNome(nome):
+    tamanho = len(nome)
+    menor = len(nome[0]) 
+    menornome = nome[0]       
+    for i in range(tamanho):
+        if len(nome[i].strip()) < menor:
+            menornome = nome[i]
+            menor = len(nome[i].strip())
+    print (f'O meenro nome é o {menornome.capitalize()} com {menor} letras')
+        
+
+def ordemLex(nome):
+    maior = nome[0].lower() #na verdade é o menor
+    for i in nome:
+        if maior > i.lower():
+            maior = i.lower()
+    print (maior)
+
+nome = ['joao', 'paulo', 'rodrigues', ' bel ', 'alonso']
+
+ordemLex(nome)
