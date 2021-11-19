@@ -16,8 +16,7 @@ class Triangulo:
         else: 
             tipo = 'isósceles'
             return tipo
-
-
+'''
 import pytest
 @pytest.mark.parametrize("a, b, c, tipo", [
     (1, 1, 1, 'equilátero'),
@@ -26,3 +25,4 @@ import pytest
 def test_tipo(a,b,c,tipo):
     t = Triangulo(a,b,c)
     assert t.tipo_lado() == tipo
+'''
