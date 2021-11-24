@@ -44,8 +44,9 @@ def ordemLex(nome):
     for i in nome:
         if maior > i.lower():
             maior = i.lower()
+    maior.capitalize()
     print (maior)
 
-nome = ['joao', 'paulo', 'rodrigues', ' bel ', 'alonso']
+nome = ['joao', 'Paulo', 'rodrigues', ' bEL ', 'alonso']
 
 ordemLex(nome)

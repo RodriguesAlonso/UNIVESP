@@ -1,6 +1,11 @@
 import pytest
 from atividade01 import dimensoes
+from lex import primeiro_lex
+from maiusculas import maiusculas
+from meno_nome import menor_nome
 from somaMatriz import soma_matrizes
+from conta_letras import conta_letras
+
 '''
 def func(x):
     return x + 1
@@ -44,4 +49,37 @@ m6 = [[1]]
 m7 = [[1,2,3],[1,2,3],[1,2,3]]
 def test_1x1_3x3():
     assert soma_matrizes(m6, m7) == False
+def test_maiuscula_P():
+     assert maiusculas('Programamos em python 2?') == 'P'
+
+def test_maiuscula_PP():
+    assert maiusculas('Programamos em Python 3.') == 'PP'
+
+def test_maiuscula_PORMMS():
+    assert maiusculas('PrOgRaMaMoS em python!') == 'PORMMS'
+def test_menor01():
+   assert menor_nome(['maria', 'josé', 'PAULO', 'Catarina']) == 'José'
+
+def test_menor02():
+    assert menor_nome(['maria', ' josé  ', '  PAULO', 'Catarina  ']) == 'José'
+
+def test_menor03():
+    assert menor_nome(['Bárbara', 'JOSÉ  ', 'Bill']) == 'José'
+
+def test_menor04():
+    assert menor_nome(['zé', ' lu', 'fê']) == 'Zé'
+
+def test_conta_letras01():
+    assert conta_letras('programamos em python') == 6
+
+def test_conta_letras02():
+    assert conta_letras('programamos em python', 'vogais') == 6
+
+def test_conta_letras03():
+    assert conta_letras('programamos em python', 'consoantes') == 13
 '''
+
+def test_lex01():
+    assert primeiro_lex(['oĺá', 'A', 'a', 'casa']) == 'A'
+def test_lex02():
+    assert primeiro_lex(['AAAAAA', 'b']) == 'AAAAAA'
